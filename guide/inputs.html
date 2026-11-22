@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inputs, tables and data · OCP Guide</title>
+  <meta name="description" content="Drop-down lists, sliders and check boxes for safe inputs; tables and input tables; data from Excel and CSV files; other worksheets; Python scripts.">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="../#features">Features</a>
+        <a href="../directory.html">Directory</a>
+        <a href="index.html" aria-current="page">Guide</a>
+        <a class="nav-cta" href="../#download">Download</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap docs">
+    <aside class="docs-nav">
+      <details open><summary>Guide</summary><nav><a href="index.html">Getting started</a><a href="formulas.html">Formulas</a><a href="units.html">Units</a><a href="functions.html">Function reference</a><a href="math.html">Matrices, symbolic math and solving</a><a href="plots.html">Plots, sketches and pictures</a><a href="inputs.html" aria-current="page">Inputs, tables and data</a><a href="pages.html">Text, layout and organisation</a><a href="reports.html">Reports and Mathcad files</a><a href="extend.html">Components, tables, Python and the directory</a><a href="phone.html">The phone app</a><a href="shortcuts.html">Keyboard shortcuts</a></nav></details>
+    </aside>
+    <main class="docs-main">
+      <p class="kicker">OCP Guide</p>
+      <h1>Inputs, tables and data</h1>
+      <p class="docs-lead">Drop-down lists, sliders and check boxes for safe inputs; tables and input tables; data from Excel and CSV files; other worksheets; Python scripts.</p>
+      <div class="on-page"><strong>On this page</strong><a href="#controls">Drop-downs, sliders and check boxes</a><a href="#tables">Tables</a><a href="#files">Data from files</a><a href="#excel">Excel inside a worksheet Pro</a><a href="#include">Other worksheets</a><a href="#scripts">Python scripts</a></div>
+      
+<h2 id="controls">Drop-downs, sliders and check boxes</h2>
+<p>Select a definition, then choose one of these on the <strong>Insert</strong> tab (or in the formula's right-click menu):</p>
+<ul>
+<li><strong>Drop-down list</strong>: the value is picked from a list, such as <code>Material := "S275"</code> from S235, S275, S355. In the list dialog, <strong>Show as</strong> also offers radio buttons or a list box.</li>
+<li><strong>Slider</strong>: drag to set a value, such as <code>t := 12 mm</code> between limits and in steps you choose.</li>
+<li><strong>Check box</strong>: ticked it is 1, else 0, for an <code>if</code> in the formulas below.</li>
+</ul>
+<p>The control writes the value just as typing would, so every formula below follows.</p>
+
+<h2 id="tables">Tables</h2>
+<p><strong>Insert › Table</strong> adds an editable grid. Give it a name and its numbers become a matrix you can use in formulas. Texts are allowed too, for a list of sections with <code>vlookup</code>.</p>
+<p><strong>Insert › Input table</strong>: each column is a variable with a name, a unit and one value or several. A tidy way to enter loads or a set of cases.</p>
+<p>For section catalogues and material properties, the <a href="extend.html#tables">lookup tables</a> are easier: <code>IPE("IPE 300", "A")</code>.</p>
+
+<h2 id="files">Data from files</h2>
+<p>Read data from a file in the worksheet's folder:</p>
+<table class="plain">
+<tr><td><code>READEXCEL("loads.xlsx", "Sheet1!A2:C20")</code></td><td>a range of an Excel workbook</td></tr>
+<tr><td><code>READCSV("measurements.csv")</code></td><td>a CSV file</td></tr>
+<tr><td><code>READPRN("data.prn")</code></td><td>a text file of numbers</td></tr>
+</table>
+<p>Numbers and texts come in as a table (a matrix). When the file changes, the worksheet calculates again. For safety, only files in or under the worksheet's folder are read, never network or internet paths.</p>
+
+<h2 id="excel">Excel inside a worksheet <span class="pro-tag">Pro</span></h2>
+<p><strong>Insert › Excel › From file</strong> keeps a workbook inside the worksheet; <strong>New sheet</strong> starts an empty one. Click a cell to make it an input (it gets a worksheet value) or an output (it defines a name). OCP calculates the workbook's formulas itself, and <strong>Open in Excel</strong> edits it in Excel.</p>
+
+<h2 id="include">Other worksheets</h2>
+<p><strong>Insert › Include worksheet</strong> writes <code>include("file")</code>: the definitions of another worksheet, from this worksheet's folder, are available here. When that worksheet changes, this one calculates again. Includes can be nested.</p>
+
+<h2 id="scripts">Python scripts</h2>
+<p><strong>Insert › Python script</strong> adds a script region. Its <code># in:</code> line names the values it reads (with units), its <code># out:</code> line the names it defines for the formulas below:</p>
+<pre><code># in: L [m], w [kN/m]
+# out: M [kN*m]
+M = w * L**2 / 8</code></pre>
+<p>Scripts run in the Python installed on this computer, and only when you turn on <strong>Calculus › Run scripts</strong> for that worksheet. It is off whenever a worksheet opens. Turn it on only for worksheets you trust: a script can do anything Python can. For functions you call from formulas, see <a href="extend.html#python">Python functions</a>.</p>
+
+      <nav class="pager"><a href="plots.html">← Plots, sketches and pictures</a><a href="pages.html">Text, layout and organisation →</a></nav>
+    </main>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt="" width="24" height="24">Open Calculation Platform</a>
+      <span><a href="index.html">Guide</a> · <a href="../directory.html">Directory</a> · <a href="../privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script>
+    document.querySelectorAll(".tex").forEach(function (el) {
+      try { katex.render(el.dataset.tex, el, { throwOnError: false, strict: false }); } catch (e) { el.textContent = el.dataset.tex; }
+    });
+  </script>
+</body>
+</html>

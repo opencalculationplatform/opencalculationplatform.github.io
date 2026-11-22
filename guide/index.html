@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Getting started · OCP Guide</title>
+  <meta name="description" content="Install OCP, find your way around the window and the phone, and write your first calculation in two minutes.">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="../#features">Features</a>
+        <a href="../directory.html">Directory</a>
+        <a href="index.html" aria-current="page">Guide</a>
+        <a class="nav-cta" href="../#download">Download</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap docs">
+    <aside class="docs-nav">
+      <details open><summary>Guide</summary><nav><a href="index.html" aria-current="page">Getting started</a><a href="formulas.html">Formulas</a><a href="units.html">Units</a><a href="functions.html">Function reference</a><a href="math.html">Matrices, symbolic math and solving</a><a href="plots.html">Plots, sketches and pictures</a><a href="inputs.html">Inputs, tables and data</a><a href="pages.html">Text, layout and organisation</a><a href="reports.html">Reports and Mathcad files</a><a href="extend.html">Components, tables, Python and the directory</a><a href="phone.html">The phone app</a><a href="shortcuts.html">Keyboard shortcuts</a></nav></details>
+    </aside>
+    <main class="docs-main">
+      <p class="kicker">OCP Guide</p>
+      <h1>Getting started</h1>
+      <p class="docs-lead">Install OCP, find your way around the window and the phone, and write your first calculation in two minutes.</p>
+      <div class="on-page"><strong>On this page</strong><a href="#install">Install</a><a href="#first">Your first calculation</a><a href="#window">The Windows window</a><a href="#phone">The phone app</a><a href="#typing">Typing formulas</a><a href="#files">Saving and opening</a><a href="#next">Where next</a></div>
+      
+<h2 id="install">Install</h2>
+<div class="cols">
+<div class="box"><h3>Windows 10 and 11</h3>
+<ol><li>Download the <a href="../#download">Windows setup</a>.</li>
+<li>Run it. It installs for your user only, without administrator rights. If Windows SmartScreen says it does not know the app, choose <strong>More info › Run anyway</strong>.</li>
+<li>Start <strong>Open Calculation Platform</strong> from the Start menu. A newer setup run later updates it in place.</li></ol>
+<p>Prefer no installer? The portable zip runs from any folder.</p></div>
+<div class="box"><h3>Android 7 or later</h3>
+<ol><li>On your phone, download the <a href="../#download">Android APK</a>.</li>
+<li>Open it. Android asks once to allow your browser to install apps: allow it, then install.</li>
+<li>Open <strong>OCP</strong>. It starts on a blank worksheet with a formula ready and the keypad up.</li></ol></div>
+</div>
+
+<h2 id="first">Your first calculation</h2>
+<p>Click anywhere on the paper and type. A formula starts where you click.</p>
+<ol>
+<li>Type <kbd>L</kbd> <kbd>:</kbd> <kbd>6</kbd> <kbd>m</kbd>, then <kbd>Enter</kbd>. The colon becomes <code>:=</code>, “is defined as”.</li>
+<li>Type <kbd>q</kbd> <kbd>:</kbd> <kbd>12</kbd> <kbd>kN/m</kbd>, then <kbd>Enter</kbd>.</li>
+<li>Type <kbd>M</kbd> <kbd>:</kbd> <kbd>q*L^2</kbd>, press <kbd>→</kbd> to leave the power, then <kbd>/8=</kbd>. The answer appears with its unit.</li>
+</ol>
+<figure class="ws"><div class="ws-caption">A first calculation: a simply supported beam</div><div class="ws-line"><span class="tex" data-tex="L\coloneq 6\,\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="q\coloneq 12\,\mathrm{kN}/\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="M\coloneq\frac{q\cdot L^2}{8}="></span> <span class="tex ws-result" data-tex="54\,\mathrm{kN}\cdot\mathrm{m}"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<p>Change <code>L</code> to <code>8 m</code> and <code>M</code> updates at once, along with everything below it that uses <code>L</code>.</p>
+
+<h2 id="window">The Windows window</h2>
+<p>Everything is on the ribbon, by task. Hover any button for an explanation and a real example with OCP's answer.</p>
+<table class="plain">
+<tr><th>Tab</th><th>What it holds</th></tr>
+<tr><td><strong>File</strong></td><td>New, Open, Save, Save As, Export PDF, Export to Word, Plugin Manager, recent files, About.</td></tr>
+<tr><td><strong>Math</strong></td><td>Undo, Find, Delete, Disable; new Math or Text regions, Sections, Protect; definitions, variables, units, Greek letters; operators, comparisons and logic; every function by kind; matrices; constants.</td></tr>
+<tr><td><strong>Calculus</strong></td><td>Automatic or manual calculation, Run scripts, Calculate (F9); integrals, sums, derivatives and limits; symbolic keywords (→); the equation solver and solving functions; curve fitting; programming.</td></tr>
+<tr><td><strong>Insert</strong></td><td>Math, Text, headings; tables, input tables, drop-down lists, sliders, check boxes, sketches, plots, pictures, included worksheets, solvers, Python scripts; Components, Tables, Directory, Python functions, Save as component; Excel; sections, hyperlinks, page breaks.</td></tr>
+<tr><td><strong>Format</strong></td><td>Bold, italic, colours, highlight; fonts for all formulas; the unit system; result format and digits; Values in formulas; alignment and right to left; styles.</td></tr>
+<tr><td><strong>Page Layout</strong></td><td>Paper size, portrait or landscape, margins.</td></tr>
+<tr><td><strong>Report</strong></td><td>Report details (project, engineer…), header, contents, numbered headings; export to PDF or Word.</td></tr>
+<tr><td><strong>View</strong></td><td>The Problems panel, warnings on the page, formula shortcuts.</td></tr>
+</table>
+<p>Beside the worksheet, the <strong>Problems</strong> panel lists errors and warnings (click one to go to it), and <strong>Functions</strong> lists the functions your plugins add. Each open worksheet has its own tab.</p>
+<figure class="shot-figure"><img src="../images/zoom-ribbon.webp" width="1600" height="168" alt="The Math tab of OCP's ribbon." loading="lazy"></figure>
+
+<h2 id="phone">The phone app</h2>
+<p>The top bar has ☰ (start screen with recent worksheets), the worksheet's name and state, undo, redo, save and ⋮ (New calculation, Open, Save as, Share, Components, Save as component, Tables, Directory, Format and page, Page or Column view, Calculate now). Below the worksheet, OCP's own keypad types formulas: see <a href="phone.html">The phone app</a>.</p>
+
+<h2 id="typing">Typing formulas</h2>
+<table class="plain">
+<tr><th>Type</th><th>To get</th></tr>
+<tr><td><kbd>:</kbd></td><td><code>:=</code> define a name</td></tr>
+<tr><td><kbd>=</kbd></td><td>show the result</td></tr>
+<tr><td><kbd>~</kbd></td><td><code>≡</code> a global definition</td></tr>
+<tr><td><kbd>/</kbd></td><td>a fraction (what comes before goes on top)</td></tr>
+<tr><td><kbd>^</kbd></td><td>a power; <kbd>→</kbd> leaves it</td></tr>
+<tr><td><kbd>_</kbd></td><td>a subscript, part of the name: <code>M_Ed</code> → <span class="tex" data-tex="M_{Ed}"></span></td></tr>
+<tr><td><kbd>*</kbd></td><td>multiplication ·</td></tr>
+<tr><td><code>sqrt</code>, <code>alpha</code>, <code>sigma</code>…</td><td>√, α, σ…</td></tr>
+<tr><td><kbd>..</kbd></td><td>a range, <code>1..10</code></td></tr>
+<tr><td><kbd>"</kbd> in an empty formula</td><td>turn it into text</td></tr>
+<tr><td><kbd>Enter</kbd> / <kbd>Tab</kbd></td><td>next line / next formula to the right</td></tr>
+</table>
+<p>More in <a href="shortcuts.html">Keyboard shortcuts</a>.</p>
+
+<h2 id="files">Saving and opening</h2>
+<ul>
+<li>Worksheets are saved as <code>.ocp</code> files. OCP also opens Mathcad Prime <code>.mcdx</code> files (see <a href="reports.html#mathcad">Mathcad files</a>).</li>
+<li>Several worksheets open as tabs. Files given on the command line or opened from Explorer open as tabs too.</li>
+<li>OCP keeps an automatic copy of unsaved work. If it ever closes unexpectedly, it offers to recover it the next time it starts.</li>
+<li>On the phone, Open and Save as use Android's file picker, so worksheets can live in Downloads, Drive or any folder.</li>
+</ul>
+
+<h2 id="next">Where next</h2>
+<div class="cards-mini">
+<a href="formulas.html"><strong>Formulas</strong><span>definitions, functions, ranges, checks</span></a>
+<a href="units.html"><strong>Units</strong><span>converting, choosing, your own</span></a>
+<a href="functions.html"><strong>Function reference</strong><span>every function with an example</span></a>
+<a href="math.html"><strong>Matrices, symbolic and solving</strong><span>exact answers and solvers</span></a>
+<a href="plots.html"><strong>Plots and sketches</strong><span>diagrams, 3D, drawings</span></a>
+<a href="extend.html"><strong>Components, tables, Python</strong><span>make OCP yours</span></a>
+</div>
+
+      <nav class="pager"><span></span><a href="formulas.html">Formulas →</a></nav>
+    </main>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt="" width="24" height="24">Open Calculation Platform</a>
+      <span><a href="index.html">Guide</a> · <a href="../directory.html">Directory</a> · <a href="../privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script>
+    document.querySelectorAll(".tex").forEach(function (el) {
+      try { katex.render(el.dataset.tex, el, { throwOnError: false, strict: false }); } catch (e) { el.textContent = el.dataset.tex; }
+    });
+  </script>
+</body>
+</html>

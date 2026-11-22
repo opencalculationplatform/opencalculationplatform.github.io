@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The phone app · OCP Guide</title>
+  <meta name="description" content="OCP on Android: a keypad made for engineering formulas, live answers, column view for narrow screens, and touch gestures for everything.">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="../#features">Features</a>
+        <a href="../directory.html">Directory</a>
+        <a href="index.html" aria-current="page">Guide</a>
+        <a class="nav-cta" href="../#download">Download</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap docs">
+    <aside class="docs-nav">
+      <details open><summary>Guide</summary><nav><a href="index.html">Getting started</a><a href="formulas.html">Formulas</a><a href="units.html">Units</a><a href="functions.html">Function reference</a><a href="math.html">Matrices, symbolic math and solving</a><a href="plots.html">Plots, sketches and pictures</a><a href="inputs.html">Inputs, tables and data</a><a href="pages.html">Text, layout and organisation</a><a href="reports.html">Reports and Mathcad files</a><a href="extend.html">Components, tables, Python and the directory</a><a href="phone.html" aria-current="page">The phone app</a><a href="shortcuts.html">Keyboard shortcuts</a></nav></details>
+    </aside>
+    <main class="docs-main">
+      <p class="kicker">OCP Guide</p>
+      <h1>The phone app</h1>
+      <p class="docs-lead">OCP on Android: a keypad made for engineering formulas, live answers, column view for narrow screens, and touch gestures for everything.</p>
+      <div class="on-page"><strong>On this page</strong><a href="#start">Start screen</a><a href="#keypad">The keypad</a><a href="#answers">Live answers, Ans and History</a><a href="#views">Page view and column view</a><a href="#touch">Touch</a><a href="#files">Files</a></div>
+      
+<h2 id="start">Start screen</h2>
+<p>OCP opens on a blank worksheet with a formula ready. ☰ opens the start screen: <strong>New calculation</strong>, <strong>Open worksheet…</strong>, <strong>Recent</strong> worksheets (× removes one) and <strong>Continue</strong>. OCP asks before leaving unsaved changes. Back returns to the start screen, then leaves the app.</p>
+
+<h2 id="keypad">The keypad</h2>
+<ul>
+<li><strong>123</strong>: digits, ÷ × − +, brackets, powers xⁿ and x², √, <strong>Ans</strong>, <code>:=</code> and <code>=</code>, ⌫ and ⏎.</li>
+<li><strong>SCI</strong>: sin, cos, tan and their inverses, ln, log, eˣ, π, e, degrees, x⁻¹, x³, ∛, ⁿ√, |x|, %, ×10ⁿ.</li>
+<li><strong>ABC</strong>: letters (AZERTY for French, otherwise QWERTY), subscript, space. <strong>⌨</strong> there switches to your phone's keyboard; the blue <strong>Keypad</strong> button brings OCP's back.</li>
+<li><strong>αβ</strong>: Greek letters. <strong>kN</strong>: units by quantity.</li>
+<li>The bar above has ◀ ▶ (move the cursor; slide along them for fine moves), → (symbolic), x₁ (subscript), f(x), ∫, comparisons, <strong>Text</strong>, <strong>Plot</strong>, <strong>Solve</strong>, undo and redo.</li>
+</ul>
+
+<h2 id="answers">Live answers, Ans and History</h2>
+<p>While you type a plain calculation, its answer shows faded beside it; <code>=</code> makes it real. <strong>Ans</strong> inserts the last answer at full precision. <strong>History</strong> lists your recent answers, newest first; tap one to insert it.</p>
+
+<h2 id="views">Page view and column view</h2>
+<p>⋮ › <strong>Column view</strong> fits any worksheet to the phone: formulas side by side become rows in reading order, and plots and pictures scale to the width. ⋮ › Format and page › <strong>Text and formula size</strong> sets how large they are. <strong>Page view</strong> shows the real A4 page. Your choice is remembered.</p>
+
+<h2 id="touch">Touch</h2>
+<ul>
+<li><strong>Tap</strong> a formula to edit it, with the cursor where you tapped.</li>
+<li><strong>Hold</strong> a region and lift to open its menu (Copy result, Disable, Select…); hold and drag to move it.</li>
+<li><strong>Select</strong> in that menu starts selecting: tap more regions, then Copy, Cut or Delete. Paste on the bar puts them back.</li>
+<li><strong>Pinch</strong> to zoom; the formula you type stays in view.</li>
+<li>Drag the round blue grip of a plot or picture to resize it.</li>
+<li>Selecting a number shows Android's own Copy bar; a copied fraction pastes back as a fraction.</li>
+<li>The S Pen works like a finger, and more precisely.</li>
+</ul>
+
+<h2 id="files">Files</h2>
+<p>⋮ › Open, Save as and Share use Android's file picker and share sheet, so worksheets can live anywhere: Downloads, Drive, or sent by email. Worksheets open the same on Windows and on the phone.</p>
+
+      <nav class="pager"><a href="extend.html">← Components, tables, Python and the directory</a><a href="shortcuts.html">Keyboard shortcuts →</a></nav>
+    </main>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt="" width="24" height="24">Open Calculation Platform</a>
+      <span><a href="index.html">Guide</a> · <a href="../directory.html">Directory</a> · <a href="../privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script>
+    document.querySelectorAll(".tex").forEach(function (el) {
+      try { katex.render(el.dataset.tex, el, { throwOnError: false, strict: false }); } catch (e) { el.textContent = el.dataset.tex; }
+    });
+  </script>
+</body>
+</html>

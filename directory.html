@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OCP Directory</title>
+  <meta name="description" content="Components and tables shared by OCP users: steel sections, materials, rebar, beam, column and footing checks. Install them from inside OCP.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="./#features">Features</a>
+        <a href="directory.html" aria-current="page">Directory</a>
+        <a href="guide/index.html">Guide</a>
+        <a class="nav-cta" href="./#download">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h2>Directory</h2>
+        <p class="sub">Components and tables shared by OCP users, reviewed before they are listed. To install one, open OCP: <strong>Insert › Directory</strong> on Windows, <strong>⋮ › Directory</strong> on the phone. To share yours, choose <strong>Publish</strong> in Components or Tables. <a href="guide/extend.html#directory">How it works</a></p>
+        <div class="toolbar">
+          <input id="search" type="search" placeholder="Search: IPE, concrete, footing…" aria-label="Search the directory">
+          <button class="chip" data-kind="" aria-pressed="true">All</button>
+          <button class="chip" data-kind="Component" aria-pressed="false">Components</button>
+          <button class="chip" data-kind="Table" aria-pressed="false">Tables</button>
+        </div>
+        <p id="status" class="status">Reading the directory…</p>
+        <div id="items" class="items"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Open Calculation Platform · free engineering calculations</span>
+      <span><a href="https://github.com/opencalculationplatform/ocp-directory">Directory on GitHub</a> · <a href="privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+  </footer>
+
+  <script>
+    // The same list OCP reads: the directory's index.json on GitHub.
+    (function () {
+      var root = "https://raw.githubusercontent.com/opencalculationplatform/ocp-directory/main/";
+      var items = [], kind = "";
+      var list = document.getElementById("items"), status = document.getElementById("status"), search = document.getElementById("search");
+
+      function text(tag, cls, value) { var el = document.createElement(tag); if (cls) el.className = cls; el.textContent = value; return el; }
+
+      function show() {
+        var words = search.value.toLowerCase().split(/\s+/).filter(Boolean);
+        var shown = items.filter(function (i) {
+          var all = (i.title + " " + i.category + " " + i.description + " " + i.id + " " + i.author).toLowerCase();
+          return (!kind || i.kind === kind) && words.every(function (w) { return all.indexOf(w) >= 0; });
+        });
+        list.textContent = "";
+        shown.forEach(function (i) {
+          var card = document.createElement("article");
+          card.className = "card item";
+          card.appendChild(text("div", "kind", i.kind + " · " + i.category));
+          card.appendChild(text("h3", "", i.title));
+          card.appendChild(text("p", "", i.description));
+          var meta = text("div", "meta", "by " + i.author + (i.kind === "Component" ? " · version " + i.version : "") + " · ");
+          var file = document.createElement("a");
+          file.href = "https://github.com/opencalculationplatform/ocp-directory/blob/main/" + encodeURI(i.file);
+          file.textContent = "file";
+          meta.appendChild(file);
+          card.appendChild(meta);
+          list.appendChild(card);
+        });
+        status.textContent = items.length === 0 ? "Nothing has been shared yet." : shown.length === 0 ? "Nothing matches." : shown.length + " of " + items.length;
+      }
+
+      document.querySelectorAll(".chip").forEach(function (chip) {
+        chip.addEventListener("click", function () {
+          kind = chip.dataset.kind;
+          document.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
+          show();
+        });
+      });
+      search.addEventListener("input", show);
+
+      fetch(root + "index.json", { cache: "no-store" })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (index) {
+          items = (index.items || []).slice().sort(function (a, b) {
+            return (a.category + a.title).localeCompare(b.category + b.title);
+          });
+          show();
+        })
+        .catch(function () { status.textContent = "The directory could not be read just now. It is also on GitHub: github.com/opencalculationplatform/ocp-directory"; });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulas · OCP Guide</title>
+  <meta name="description" content="Define values and functions, show results, use ranges and conditions. OCP reads a worksheet from top to bottom and left to right, like a calculation on paper.">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="../#features">Features</a>
+        <a href="../directory.html">Directory</a>
+        <a href="index.html" aria-current="page">Guide</a>
+        <a class="nav-cta" href="../#download">Download</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap docs">
+    <aside class="docs-nav">
+      <details open><summary>Guide</summary><nav><a href="index.html">Getting started</a><a href="formulas.html" aria-current="page">Formulas</a><a href="units.html">Units</a><a href="functions.html">Function reference</a><a href="math.html">Matrices, symbolic math and solving</a><a href="plots.html">Plots, sketches and pictures</a><a href="inputs.html">Inputs, tables and data</a><a href="pages.html">Text, layout and organisation</a><a href="reports.html">Reports and Mathcad files</a><a href="extend.html">Components, tables, Python and the directory</a><a href="phone.html">The phone app</a><a href="shortcuts.html">Keyboard shortcuts</a></nav></details>
+    </aside>
+    <main class="docs-main">
+      <p class="kicker">OCP Guide</p>
+      <h1>Formulas</h1>
+      <p class="docs-lead">Define values and functions, show results, use ranges and conditions. OCP reads a worksheet from top to bottom and left to right, like a calculation on paper.</p>
+      <div class="on-page"><strong>On this page</strong><a href="#define">Define and evaluate</a><a href="#names">Names</a><a href="#global">Global definitions</a><a href="#functions">Your own functions</a><a href="#ranges">Ranges</a><a href="#checks">Conditions and checks</a><a href="#programs">Programs</a><a href="#calculation">How OCP calculates</a></div>
+      
+<h2 id="define">Define and evaluate</h2>
+<p><code>:=</code> gives a name a value; <code>=</code> shows a value. A definition can show its result too: end it with <code>=</code>.</p>
+<figure class="ws"><div class="ws-caption">Definitions, and a result shown with =</div><div class="ws-line"><span class="tex" data-tex="a\coloneq 3"></span></div><div class="ws-line"><span class="tex" data-tex="b\coloneq 4"></span></div><div class="ws-line"><span class="tex" data-tex="c\coloneq\sqrt{a^2+b^2}="></span> <span class="tex ws-result" data-tex="5"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<figure class="ws"><div class="ws-caption">Plain calculations</div><div class="ws-line"><span class="tex" data-tex="\frac{2+3}{4}\cdot 10="></span> <span class="tex ws-result" data-tex="12.5"></span></div><div class="ws-line"><span class="tex" data-tex="2^{10}="></span> <span class="tex ws-result" data-tex="1024"></span></div><div class="ws-line"><span class="tex" data-tex="\frac{1}{3}="></span> <span class="tex ws-result" data-tex="0.3333"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<p>OCP reads the worksheet like a page: a name must be defined above (or to the left of) where it is used. Move a formula by dragging its border.</p>
+
+<h2 id="names">Names</h2>
+<p>Names start with a letter and may use letters, digits, Greek letters and a subscript: type <kbd>_</kbd> for <span class="tex" data-tex="\sigma_{Ed}"></span>. Type a Greek letter by its name (<code>alpha</code>, <code>sigma</code>, <code>gamma</code>) or pick it from <strong>Math › Greek</strong>. Upper and lower case are different names.</p>
+<figure class="ws"><div class="ws-caption">Engineering names with subscripts and Greek letters</div><div class="ws-line"><span class="tex" data-tex="\sigma_{Ed}\coloneq 120\,\mathrm{MPa}"></span></div><div class="ws-line"><span class="tex" data-tex="f_{y}\coloneq 355\,\mathrm{MPa}"></span></div><div class="ws-line"><span class="tex" data-tex="\gamma_{M0}\coloneq 1.0"></span></div><div class="ws-line"><span class="tex" data-tex="\eta\coloneq\frac{\sigma_{Ed}\cdot\gamma_{M0}}{f_{y}}="></span> <span class="tex ws-result" data-tex="0.338"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<div class="units-ref"><div class="units-group"><div class="units-name">Greek</div><div><span class="unit-chip" title="alpha (type alpha)">α</span><span class="unit-chip" title="beta (type beta)">β</span><span class="unit-chip" title="gamma (type gamma)">γ</span><span class="unit-chip" title="delta (type delta)">δ</span><span class="unit-chip" title="varepsilon (type varepsilon)">ε</span><span class="unit-chip" title="eta (type eta)">η</span><span class="unit-chip" title="theta (type theta)">θ</span><span class="unit-chip" title="kappa (type kappa)">κ</span><span class="unit-chip" title="lambda (type lambda)">λ</span><span class="unit-chip" title="mu (type mu)">μ</span><span class="unit-chip" title="nu (type nu)">ν</span><span class="unit-chip" title="xi (type xi)">ξ</span><span class="unit-chip" title="rho (type rho)">ρ</span><span class="unit-chip" title="sigma (type sigma)">σ</span><span class="unit-chip" title="tau (type tau)">τ</span><span class="unit-chip" title="phi (type phi)">φ</span><span class="unit-chip" title="chi (type chi)">χ</span><span class="unit-chip" title="psi (type psi)">ψ</span><span class="unit-chip" title="omega (type omega)">ω</span><span class="unit-chip" title="Gamma (type Gamma)">Γ</span><span class="unit-chip" title="Delta (type Delta)">Δ</span><span class="unit-chip" title="Theta (type Theta)">Θ</span><span class="unit-chip" title="Lambda (type Lambda)">Λ</span><span class="unit-chip" title="Sigma (type Sigma)">Σ</span><span class="unit-chip" title="Phi (type Phi)">Φ</span><span class="unit-chip" title="Psi (type Psi)">Ψ</span><span class="unit-chip" title="Omega (type Omega)">Ω</span></div></div></div>
+
+<h2 id="global">Global definitions</h2>
+<p><code>≡</code> (type <kbd>~</kbd>) defines a name for the whole worksheet, above it too. Use it for constants you keep at the end of a sheet.</p>
+<figure class="ws"><div class="ws-caption">g₀ is defined below, yet used above</div><div class="ws-line"><span class="tex" data-tex="m\coloneq 80\,\mathrm{kg}"></span></div><div class="ws-line"><span class="tex" data-tex="W\coloneq m\cdot g_{0}="></span> <span class="tex ws-result" data-tex="0.7848\,\mathrm{kN}"></span></div><div class="ws-line"><span class="tex" data-tex="g_{0}\equiv 9.81\,\mathrm{m}/\mathrm{s}^{2}"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+
+<h2 id="functions">Your own functions</h2>
+<p>Define a function with its parameters in brackets, then call it with any values, with or without units.</p>
+<figure class="ws"><div class="ws-caption">A function of one variable</div><div class="ws-line"><span class="tex" data-tex="A\left(r\right)\coloneq\pi\cdot r^2"></span></div><div class="ws-line"><span class="tex" data-tex="A\left(2\,\mathrm{m}\right)="></span> <span class="tex ws-result" data-tex="12.57\,\mathrm{m}^{2}"></span></div><div class="ws-line"><span class="tex" data-tex="A\left(150\,\mathrm{mm}\right)="></span> <span class="tex ws-result" data-tex="7.069\times10^{4}\,\mathrm{mm}^{2}"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<figure class="ws"><div class="ws-caption">A moment along a beam: q and L come from above</div><div class="ws-line"><span class="tex" data-tex="q\coloneq 10\,\mathrm{kN}/\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="L\coloneq 6\,\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="M\left(x\right)\coloneq\frac{q\cdot x\cdot\left(L-x\right)}{2}"></span></div><div class="ws-line"><span class="tex" data-tex="M\left(\frac{L}{2}\right)="></span> <span class="tex ws-result" data-tex="45\,\mathrm{kN}\cdot\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="M\left(1\,\mathrm{m}\right)="></span> <span class="tex ws-result" data-tex="25\,\mathrm{kN}\cdot\mathrm{m}"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+
+<h2 id="ranges">Ranges</h2>
+<p>A range variable takes each value in turn: <code>i := 1..5</code>. A formula that uses it is worked out for each value and shows them all. Give a second value to set the step: <code>x := 0 m, 1 m..4 m</code>.</p>
+<figure class="ws"><div class="ws-caption">A range</div><div class="ws-line"><span class="tex" data-tex="i\coloneq 1..5"></span></div><div class="ws-line"><span class="tex" data-tex="i^2="></span> <span class="tex ws-result" data-tex="\begin{bmatrix}1\\4\\9\\16\\25\end{bmatrix}"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<figure class="ws"><div class="ws-caption">A range with units and a step</div><div class="ws-line"><span class="tex" data-tex="x\coloneq 0\,\mathrm{m},1\,\mathrm{m}..4\,\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="\frac{10\,\mathrm{kN}\cdot x}{2}="></span> <span class="tex ws-result" data-tex="\begin{bmatrix}0\,\mathrm{kN}\cdot\mathrm{m}\\5\,\mathrm{kN}\cdot\mathrm{m}\\10\,\mathrm{kN}\cdot\mathrm{m}\\15\,\mathrm{kN}\cdot\mathrm{m}\\20\,\mathrm{kN}\cdot\mathrm{m}\end{bmatrix}"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<p>Ranges also drive <a href="plots.html">plots</a> and element definitions such as <code>v[i] := i²</code>.</p>
+
+<h2 id="checks">Conditions and checks</h2>
+<p>A comparison is 1 when true and 0 when false, ready for a pass/fail check.</p>
+<figure class="ws"><div class="ws-caption">A utilisation check</div><div class="ws-line"><span class="tex" data-tex="M_{Ed}\coloneq 81\,\mathrm{kN}\cdot\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="M_{Rd}\coloneq 223.1\,\mathrm{kN}\cdot\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="U\coloneq\frac{M_{Ed}}{M_{Rd}}="></span> <span class="tex ws-result" data-tex="0.3631"></span></div><div class="ws-line"><span class="tex" data-tex="ok\coloneq U\le 1="></span> <span class="tex ws-result" data-tex="1"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<h3 id="ref-comparisons">Comparisons</h3><div class="ref"><div class="ref-row"><div class="ref-label">&lt;</div><div class="ref-tip">Less than: gives 1 (true) or 0 (false)</div><div class="ref-example"><span class="tex" data-tex="1&lt;2= 1"></span></div></div><div class="ref-row"><div class="ref-label">≤</div><div class="ref-tip">Less than or equal (type &lt;=)</div><div class="ref-example"><span class="tex" data-tex="2\le2= 1"></span></div></div><div class="ref-row"><div class="ref-label">&gt;</div><div class="ref-tip">Greater than</div><div class="ref-example"><span class="tex" data-tex="3&gt;2= 1"></span></div></div><div class="ref-row"><div class="ref-label">≥</div><div class="ref-tip">Greater than or equal (type &gt;=)</div><div class="ref-example"><span class="tex" data-tex="3\ge2= 1"></span></div></div><div class="ref-row"><div class="ref-label">==</div><div class="ref-tip">Equal, within a relative tolerance of 1e-12</div><div class="ref-example"><span class="tex" data-tex="2==2= 1"></span></div></div><div class="ref-row"><div class="ref-label">≠</div><div class="ref-tip">Not equal (type !=)</div><div class="ref-example"><span class="tex" data-tex="2\ne3= 1"></span></div></div></div><h3 id="ref-logic">Logic</h3><div class="ref"><div class="ref-row"><div class="ref-label">∧</div><div class="ref-tip">And: 1 when both sides hold, otherwise 0</div><div class="ref-example"><span class="tex" data-tex="1&lt;2\land3&lt;4= 1"></span></div></div><div class="ref-row"><div class="ref-label">∨</div><div class="ref-tip">Or: 1 when either side holds, otherwise 0</div><div class="ref-example"><span class="tex" data-tex="1&gt;2\lor3&lt;4= 1"></span></div></div><div class="ref-row"><div class="ref-label">¬</div><div class="ref-tip">Not: 1 when the condition does not hold, otherwise 0</div><div class="ref-example"><span class="tex" data-tex="\lnot\left(1&gt;2\right)= 1"></span></div></div></div>
+
+<h2 id="programs">Programs</h2>
+<p>For decisions and loops, use the <strong>Programming</strong> group (Calculus tab): <code>if</code>, <code>else if</code>, <code>for</code>, <code>while</code> and local definitions (←). A program is a single formula whose last line is its value.</p>
+<h3 id="ref-programming">Programming</h3><div class="ref"><div class="ref-row"><div class="ref-label">if</div><div class="ref-tip">Condition: the first value when the condition holds, otherwise the second (Mathcad&#x27;s if / else)</div><div class="ref-example"><span class="tex" data-tex="\begin{cases}2&amp;\text{if }3&gt;1\\5&amp;\text{otherwise}\end{cases}= 2"></span></div></div><div class="ref-row"><div class="ref-label">else if</div><div class="ref-tip">Condition with two tests: the value of the first condition that holds, otherwise the last value (Mathcad&#x27;s else if)</div><div class="ref-example"><span class="tex" data-tex="\begin{cases}1&amp;\text{if }2&lt;1\\2&amp;\text{if }0&lt;2&lt;3\\3&amp;\text{otherwise}\end{cases}= 2"></span></div></div><div class="ref-row"><div class="ref-label">for</div><div class="ref-tip">Loop (Mathcad&#x27;s for): the lines below it, behind its bar, run for each value of the name, from the first to the last. Write it after v :=, or on a line of a program. Enter adds a line; ← (type &lt;-) sets a name, as v[i] ← i^2. The last line is the result</div><div class="ref-example"><span class="tex" data-tex="v\coloneq\begin{array}{|l}\mathbf{for}\;i\in 0..4\\\quad\vert\;v\left[i\right]\leftarrow i^2\\v\end{array}= \begin{bmatrix}0\\1\\4\\9\\16\end{bmatrix}"></span></div></div><div class="ref-row"><div class="ref-label">while</div><div class="ref-tip">Loop (Mathcad&#x27;s while): the lines below it, behind its bar, run again while the condition holds. Enter adds a line</div><div class="ref-example"><span class="tex" data-tex="x\coloneq\begin{array}{|l}k\leftarrow 1\\\mathbf{while}\;k&lt;100\\\quad\vert\;k\leftarrow 2\cdot k\\k\end{array}= 128"></span></div></div><div class="ref-row"><div class="ref-label">←</div><div class="ref-tip">Set a name inside a program, as a ← 2 or v[i] ← i^2 (Mathcad&#x27;s local definition; type &lt;-)</div><div class="ref-example"><span class="tex" data-tex="x\coloneq\begin{array}{|l}a\leftarrow 2\\a^2\end{array}= 4"></span></div></div></div>
+
+<h2 id="calculation">How OCP calculates</h2>
+<ul>
+<li><strong>Automatic</strong> (Calculus › Calculation): results update after every change. Turn it off for heavy worksheets and press <kbd>F9</kbd> or <strong>Calculate</strong> when ready.</li>
+<li><strong>Disable</strong> (<kbd>Ctrl+E</kbd>, or the formula's menu): keep a formula, plot, solver or section on the page without calculating it. Press again to enable it.</li>
+<li><strong>Problems panel</strong>: every error and warning, with a click to go to it. Errors always show on the page; View › Warnings on page shows or hides the yellow warnings.</li>
+<li>When a region grows (a result, a plot), the regions below it move down so nothing overlaps.</li>
+</ul>
+
+      <nav class="pager"><a href="index.html">← Getting started</a><a href="units.html">Units →</a></nav>
+    </main>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt="" width="24" height="24">Open Calculation Platform</a>
+      <span><a href="index.html">Guide</a> · <a href="../directory.html">Directory</a> · <a href="../privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script>
+    document.querySelectorAll(".tex").forEach(function (el) {
+      try { katex.render(el.dataset.tex, el, { throwOnError: false, strict: false }); } catch (e) { el.textContent = el.dataset.tex; }
+    });
+  </script>
+</body>
+</html>

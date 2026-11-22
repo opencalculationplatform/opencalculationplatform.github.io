@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Calculation Platform</title>
+  <meta name="description" content="Free engineering calculations with live math and units, on Windows and Android. Worksheets, plots, solvers, reports, steel and concrete tables, components and an open directory.">
+  <meta property="og:title" content="Open Calculation Platform: engineering calculations, live">
+  <meta property="og:description" content="Write formulas like on paper, with units that convert themselves. Free, on Windows and Android.">
+  <meta property="og:image" content="images/win-beam.webp">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="directory.html">Directory</a>
+        <a href="guide/index.html">Guide</a>
+        <a class="nav-cta" href="#download">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="intro">
+          <span class="eyebrow"><b>New</b> Python functions and an open directory of checks</span>
+          <h1>Engineering calculations,<br><span class="grad">live and on every screen.</span></h1>
+          <p class="lead">Write formulas the way you would on paper. OCP calculates as you type, converts every unit, draws your diagrams and turns the worksheet into a report, on your PC and on your phone.</p>
+          <div class="buttons">
+            <a class="button primary" data-download="windows" href="https://github.com/opencalculationplatform/ocp/releases/latest">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3zm8.5-1.2L21 3v8.5h-9.5zM3 12.5h7.5v7.1L3 18.5zm8.5 0H21V21l-9.5-1.3z"/></svg>
+              <span class="label">Download for Windows<small>Free · Windows 10 and 11</small></span>
+            </a>
+            <a class="button" data-download="android" href="https://github.com/opencalculationplatform/ocp/releases/latest">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48 19.44 6.3a.5.5 0 0 0-.87-.5l-1.87 3.23A11.5 11.5 0 0 0 12 8.08c-1.68 0-3.27.35-4.7.95L5.43 5.8a.5.5 0 1 0-.87.5L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+              <span class="label">Get it for Android<small>APK · Android 7 or later</small></span>
+            </a>
+          </div>
+          <p class="note">Version <span data-version>latest</span> · No account · No ads · Works offline</p>
+        </div>
+
+        <div class="showcase">
+          <div class="window">
+            <div class="bar"><i></i><i></i><i></i></div>
+            <img src="images/win-beam.webp" width="1600" height="1078" alt="OCP on Windows: a steel beam check with the section chosen from a drop-down, the moment 81 kN·m, the resistance 223.1 kN·m, the utilisation 0.36 and the bending moment diagram.">
+          </div>
+          <div class="phone"><img src="images/worksheet.webp" width="540" height="1136" alt="The same beam check on a phone."></div>
+        </div>
+
+        <div class="facts">
+          <div class="fact"><strong>Free</strong><span>no account, no ads</span></div>
+          <div class="fact"><strong>Windows + Android</strong><span>the same worksheets</span></div>
+          <div class="fact"><strong>Units everywhere</strong><span>SI, US customary and CGS</span></div>
+          <div class="fact"><strong>Offline</strong><span>your files stay yours</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature tour -->
+    <section id="features" class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Why engineers like it</p>
+          <h2>Your calculation note, without the busywork</h2>
+          <p class="sub">No cells, no code, no copying numbers from a calculator. Just formulas you can read, checked as you write them.</p>
+        </div>
+
+        <div class="feature">
+          <div>
+            <span class="tag">Live math with units</span>
+            <h3>Type it as you think it. Get the answer with its unit.</h3>
+            <p>Write <code>M := q·L²/8</code> and the result appears at once, in kN·m. Mix millimetres and metres, kN and N: OCP converts everything and tells you when the units do not add up.</p>
+            <ul>
+              <li>Results update the moment an input changes, through the whole sheet.</li>
+              <li>Diagrams follow your formulas: change the span, the moment diagram redraws.</li>
+              <li>Pick a section from a drop-down and every check below follows.</li>
+            </ul>
+          </div>
+          <div class="media">
+            <div class="shot pad"><img src="images/zoom-diagram.webp" width="990" height="370" loading="lazy" alt="Formulas of a beam check (W_pl from the IPE table, f_y 355 MPa, M_Ed 81 kN·m, M_c,Rd 223.1 kN·m, utilisation 0.3631) beside the bending moment diagram."></div>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div>
+            <span class="tag">On your phone</span>
+            <h3>A real calculator for engineers, in your pocket.</h3>
+            <p>The Android app opens the same worksheets as your PC. Its keypad has fractions, powers, roots, units and Greek letters a tap away, with the answer shown live as you type.</p>
+            <ul>
+              <li>Check a calculation on site, change a value, see every result update.</li>
+              <li>Column view fits any worksheet to a narrow screen.</li>
+              <li>Open, save and share worksheets like any document; works with the S Pen.</li>
+            </ul>
+          </div>
+          <div class="media">
+            <div class="phone"><img src="images/worksheet.webp" width="540" height="1136" loading="lazy" alt="A steel beam check on an Android phone: IPE 300, S355, M_Ed 81 kN·m, M_c,Rd 223.1 kN·m, utilisation 0.3631."></div>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div>
+            <span class="tag">Plots, exact math and solvers</span>
+            <h3>From a quick plot to a 3D surface. From x to the exact answer.</h3>
+            <p>Charts, diagrams, bars, polar and contour plots, and 3D surfaces you can turn. Exact answers for integrals, limits and simplifications. A solver that finds the root, says how it found it, and checks the answer for you.</p>
+            <ul>
+              <li>Matrices, complex numbers and ranges, with units.</li>
+              <li>Solve one equation or a system; optimise; fit data.</li>
+              <li>Every solver answer is checked back in its equation.</li>
+            </ul>
+          </div>
+          <div class="media">
+            <div class="duo">
+              <div class="shot pad"><img src="images/zoom-surface.webp" width="500" height="390" loading="lazy" alt="A 3D surface plot of z = sin x · cos y with its colour scale."></div>
+              <div class="shot pad"><img src="images/zoom-math.webp" width="415" height="650" loading="lazy" alt="Exact answers: the integral of x² from 0 to a gives a³/3, the limit of sin(x)/x is 1, and a matrix with its inverse."></div>
+            </div>
+            <div class="float"><img src="images/zoom-solver.webp" width="535" height="500" loading="lazy" alt="The solver: x³ − 2x − 5 = 0 gives x₀ = 2.095, converged, and the equation holds."></div>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div>
+            <span class="tag">Components</span>
+            <h3>Write a check once. Reuse it everywhere, without code.</h3>
+            <p>Save any worksheet as a component: a calculation block with a form for its inputs and a clear report of every step. Drop it into the next project, fill in the form, done.</p>
+            <ul>
+              <li>Each step shown as written math, with the inputs in your units.</li>
+              <li>Worked examples are recalculated every time, so a broken change is caught.</li>
+              <li>Components can use other components.</li>
+            </ul>
+          </div>
+          <div class="media">
+            <div class="shot pad narrow"><img src="images/zoom-component.webp" width="625" height="885" loading="lazy" alt="A steel column buckling component in OCP: a form with area, second moment of area, buckling length and yield strength, and its report with N_cr, λ̄, Φ and χ, giving N_b,Rd = 1443 kN."></div>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div>
+            <span class="tag">Tables</span>
+            <h3>Your section and material tables, inside your formulas.</h3>
+            <p>Bring in a CSV or Excel sheet and ask it for a value: <code>IPE("IPE 300", "Wpl_y")</code> is 628.4 cm³, with its unit, ready for the next formula. Choose a row from a drop-down and the whole check follows.</p>
+            <ul>
+              <li>IPE, HEA and HEB sections, concrete and steel grades and rebar areas are ready in the directory.</li>
+              <li>See every row and column inside OCP.</li>
+            </ul>
+          </div>
+          <div class="media">
+            <div class="phone"><img src="images/table.webp" width="540" height="1136" loading="lazy" alt="The IPE table in OCP on a phone, sections IPE 80 to IPE 600 with their dimensions in millimetres."></div>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div>
+            <span class="tag">The directory</span>
+            <h3>Checks and tables shared by engineers, one tap away.</h3>
+            <p>Browse the open directory from inside OCP and install what you need: section catalogues, material classes, beam, column and footing checks. Share yours with one click.</p>
+            <ul>
+              <li>Everything is reviewed before it is listed.</li>
+              <li>Nothing you install runs code: components are worksheets, tables are data.</li>
+              <li>Each download is checked against its fingerprint.</li>
+            </ul>
+            <p style="margin-top:18px"><a href="directory.html">Browse the directory →</a></p>
+          </div>
+          <div class="media">
+            <div class="phone"><img src="images/directory.webp" width="540" height="1136" loading="lazy" alt="OCP's directory on a phone: beam, concrete and foundation components and tables with Install buttons."></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Everything else -->
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">And much more</p>
+          <h2>Everything a calculation note needs</h2>
+        </div>
+        <div class="grid">
+          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></svg></div><h3>PDF and Word reports</h3><p>Clean reports with headings, page numbers, a table of contents and numbered headings, ready to send.<span class="pro">Word, contents: Pro</span></p></div>
+          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 14H7v-2h5zm5-4H7v-2h10zm0-4H7V7h10z"/></svg></div><h3>Opens Mathcad Prime files</h3><p>Open your .mcdx worksheets and keep working; save back to Mathcad Prime when you need to.<span class="pro">Save: Pro</span></p></div>
+          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v4H3zm0 6h8v12H3zm10 0h8v5h-8zm0 7h8v5h-8z"/></svg></div><h3>Excel inside your worksheet</h3><p>Embed Excel sheets that calculate with your values, or read ranges with READEXCEL and CSV files with READCSV.<span class="pro">Pro</span></p></div>
+          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h10v2H7zm0 4h6v2H7zM5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 2v14h14V5z"/></svg></div><h3>Drop-downs, sliders, check boxes</h3><p>Make inputs anyone can change safely: pick a section, slide a load, tick an option.</p></div>
+          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6z"/></svg></div><h3>Python functions</h3><p>Write a function in Python with units on its parameters and call it in any formula (Windows, with Python installed).</p></div>
+          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.8 9.94l-3.75-3.75zM20.7 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"/></svg></div><h3>Sketches from formulas</h3><p>Draw a section or a frame whose dimensions and labels come from your formulas, and change with them.</p></div>
+          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11z"/></svg></div><h3>Protected sections</h3><p>Lock the parts of a worksheet that must not change, as in a company template.</p></div>
+          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div><h3>Find, replace, link</h3><p>Rename a variable everywhere, link to other worksheets, drawings and standards.</p></div>
+          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg></div><h3>Your own units</h3><p>Define a unit of your own (a block, a bag, a panel) and calculate with it like with kN.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Get going in minutes</p>
+          <h2>Three steps to your first calculation</h2>
+        </div>
+        <div class="steps">
+          <div class="step"><h3>Install</h3><p>Download OCP for Windows or Android. No account, no sign-up, nothing to configure.</p></div>
+          <div class="step"><h3>Write</h3><p>Click and type: <code>L := 6 m</code>, <code>M := q·L²/8 =</code>. Add tables and components from the directory.</p></div>
+          <div class="step"><h3>Share</h3><p>Export a PDF report, or send the worksheet itself: it opens the same on a phone or a PC.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section id="download">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Download</p>
+          <h2>Free. Try it on your next calculation.</h2>
+          <p class="sub">Features marked Pro are free too during early access.</p>
+        </div>
+        <div class="downloads">
+          <div class="card">
+            <h3>Windows</h3>
+            <p>Windows 10 and 11. Installs for your user, without administrator rights; a newer setup updates it.</p>
+            <div class="buttons"><a class="button primary" data-download="windows" href="https://github.com/opencalculationplatform/ocp/releases/latest">Windows setup</a></div>
+            <p class="note"><a data-download="zip" href="https://github.com/opencalculationplatform/ocp/releases/latest">Portable zip</a></p>
+          </div>
+          <div class="card">
+            <h3>Android</h3>
+            <p>Phones and tablets with Android 7 or later. Allow your browser to install apps when Android asks.</p>
+            <div class="buttons"><a class="button primary" data-download="android" href="https://github.com/opencalculationplatform/ocp/releases/latest">Android APK</a></div>
+            <p class="note">Google Play: coming soon.</p>
+          </div>
+          <div class="card">
+            <h3>What's new</h3>
+            <p>Each version with its changes, and every earlier version, is on the releases page.</p>
+            <div class="buttons"><a class="button" href="https://github.com/opencalculationplatform/ocp/releases">All releases</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head"><p class="kicker">Questions</p><h2>Good to know</h2></div>
+        <div class="faq">
+          <details><summary>Is OCP really free?</summary><p>Yes. OCP has no account, no ads and no trial period. Some advanced features are marked Pro (Word export, Mathcad export, Excel sheets, report contents); during early access they are free for everyone.</p></details>
+          <details><summary>Does it work without the internet?</summary><p>Yes. Everything runs on your device. OCP only goes online when you open the directory or publish to it. See the <a href="privacy.html">privacy policy</a>.</p></details>
+          <details><summary>Can I open my Mathcad worksheets?</summary><p>OCP opens Mathcad Prime files (.mcdx): formulas, text, units, plots and more. Saving back to Mathcad Prime is a Pro feature, free during early access.</p></details>
+          <details><summary>Windows says it doesn't know the app. Is it safe?</summary><p>OCP is new, so Windows SmartScreen may not recognise it yet. Choose <strong>More info › Run anyway</strong> to install. The setup installs for your user only and needs no administrator rights.</p></details>
+          <details><summary>How do I install the Android app?</summary><p>Download the APK on your phone and open it. Android asks once to allow your browser to install apps; allow it, then install. A Google Play version is coming.</p></details>
+          <details><summary>Which units and standards does it know?</summary><p>SI, US customary and CGS units, with conversions between them, and your own units. The directory has Eurocode tables and checks (EN 1992, EN 1993, EN 10365), and anyone can add more.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final call -->
+    <section>
+      <div class="wrap">
+        <div class="final">
+          <h2>Write your next calculation in OCP</h2>
+          <p>Free on Windows and Android. Install it in a minute and see your formulas come alive.</p>
+          <div class="buttons">
+            <a class="button" data-download="windows" href="https://github.com/opencalculationplatform/ocp/releases/latest">Download for Windows</a>
+            <a class="button ghost" data-download="android" href="https://github.com/opencalculationplatform/ocp/releases/latest">Android APK</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="./"><img src="images/logo.svg" alt="" width="24" height="24">Open Calculation Platform</a>
+      <span><a href="directory.html">Directory</a> · <a href="guide/index.html">Guide</a> · <a href="privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+  </footer>
+  <script src="site.js"></script>
+</body>
+</html>

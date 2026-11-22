@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matrices, symbolic math and solving · OCP Guide</title>
+  <meta name="description" content="Vectors and matrices with units, complex numbers, exact answers with →, and solvers that find, check and explain their answer.">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="../#features">Features</a>
+        <a href="../directory.html">Directory</a>
+        <a href="index.html" aria-current="page">Guide</a>
+        <a class="nav-cta" href="../#download">Download</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap docs">
+    <aside class="docs-nav">
+      <details open><summary>Guide</summary><nav><a href="index.html">Getting started</a><a href="formulas.html">Formulas</a><a href="units.html">Units</a><a href="functions.html">Function reference</a><a href="math.html" aria-current="page">Matrices, symbolic math and solving</a><a href="plots.html">Plots, sketches and pictures</a><a href="inputs.html">Inputs, tables and data</a><a href="pages.html">Text, layout and organisation</a><a href="reports.html">Reports and Mathcad files</a><a href="extend.html">Components, tables, Python and the directory</a><a href="phone.html">The phone app</a><a href="shortcuts.html">Keyboard shortcuts</a></nav></details>
+    </aside>
+    <main class="docs-main">
+      <p class="kicker">OCP Guide</p>
+      <h1>Matrices, symbolic math and solving</h1>
+      <p class="docs-lead">Vectors and matrices with units, complex numbers, exact answers with →, and solvers that find, check and explain their answer.</p>
+      <div class="on-page"><strong>On this page</strong><a href="#matrices">Matrices and vectors</a><a href="#complex">Complex numbers</a><a href="#symbolic">Exact answers with →</a><a href="#calculus">Integrals, sums and derivatives</a><a href="#solve-functions">Solving in a formula</a><a href="#solver">The equation solver</a><a href="#fitting">Curve fitting and interpolation</a><a href="#random">Random numbers</a></div>
+      
+<h2 id="matrices">Matrices and vectors</h2>
+<p><strong>Math › Matrix</strong> inserts one: pick the rows and columns on the grid. <strong>Add row</strong> and <strong>Add column</strong> grow the one you are editing. Elements may have units, and even be texts (for a table of sections).</p>
+<figure class="ws"><div class="ws-caption">Solve A·x = b</div><div class="ws-line"><span class="tex" data-tex="A\coloneq\begin{bmatrix}2&amp;1\\1&amp;3\end{bmatrix}"></span></div><div class="ws-line"><span class="tex" data-tex="b\coloneq\begin{bmatrix}3\\5\end{bmatrix}"></span></div><div class="ws-line"><span class="tex" data-tex="x\coloneq A^{-1}\cdot b="></span> <span class="tex ws-result" data-tex="\begin{bmatrix}0.8\\1.4\end{bmatrix}"></span></div><div class="ws-line"><span class="tex" data-tex="\operatorname{det}\left(A\right)="></span> <span class="tex ws-result" data-tex="5"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<figure class="ws"><div class="ws-caption">A vector of forces</div><div class="ws-line"><span class="tex" data-tex="R\coloneq\begin{bmatrix}10\,\mathrm{kN}\\25\,\mathrm{kN}\\15\,\mathrm{kN}\end{bmatrix}"></span></div><div class="ws-line"><span class="tex" data-tex="\max\left(R\right)="></span> <span class="tex ws-result" data-tex="25\,\mathrm{kN}"></span></div><div class="ws-line"><span class="tex" data-tex="\operatorname{mean}\left(R\right)="></span> <span class="tex ws-result" data-tex="16.67\,\mathrm{kN}"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<p>All matrix functions (transpose, inverse, det, identity, augment, stack, submatrix, sort, eigenvalues…) are in the <a href="functions.html#matrices">function reference</a>.</p>
+
+<h2 id="complex">Complex numbers</h2>
+<p>Write <code>3+4i</code> or <code>4j</code>, with units if you like. Roots, powers and logarithms of negative numbers give complex answers.</p>
+<figure class="ws"><div class="ws-caption">Complex arithmetic</div><div class="ws-line"><span class="tex" data-tex="Z\coloneq 3+4i"></span></div><div class="ws-line"><span class="tex" data-tex="\left|Z\right|="></span> <span class="tex ws-result" data-tex="5"></span></div><div class="ws-line"><span class="tex" data-tex="\sqrt{-4}="></span> <span class="tex ws-result" data-tex="2i"></span></div><div class="ws-line"><span class="tex" data-tex="Z^2="></span> <span class="tex ws-result" data-tex="-7+24i"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<figure class="ws"><div class="ws-caption">An AC circuit: current through an impedance</div><div class="ws-line"><span class="tex" data-tex="Z\coloneq\left(4+3i\right)\cdot 1\,\mathrm{\Omega}"></span></div><div class="ws-line"><span class="tex" data-tex="I_{c}\coloneq\frac{230\,\mathrm{V}}{Z}="></span> <span class="tex ws-result" data-tex="\left(36.8-27.6i\right)\,\mathrm{A}"></span></div><div class="ws-line"><span class="tex" data-tex="\left|I_{c}\right|="></span> <span class="tex ws-result" data-tex="46\,\mathrm{A}"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+
+<h2 id="symbolic">Exact answers with →</h2>
+<p>End a formula with <code>→</code> (Calculus › Symbolic) instead of <code>=</code> to get an exact, symbolic answer: simplified, expanded, factored, integrated or solved.</p>
+<figure class="ws"><div class="ws-caption">Simplify, integrate, take a limit</div><div class="ws-line"><span class="tex" data-tex="x+x+\frac{x}{2}\rightarrow"></span> <span class="tex ws-result" data-tex="\frac{5\cdot x}{2}"></span></div><div class="ws-line"><span class="tex" data-tex="\int_{0}^{a}x^2\,\mathrm{d}x\rightarrow"></span> <span class="tex ws-result" data-tex="\frac{a^{3}}{3}"></span></div><div class="ws-line"><span class="tex" data-tex="\lim_{x\to0}\frac{\sin\left(x\right)}{x}\rightarrow"></span> <span class="tex ws-result" data-tex="1"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<figure class="ws"><div class="ws-caption">The area under a moment diagram, in letters</div><div class="ws-line"><span class="tex" data-tex="M\left(x\right)\coloneq\frac{q\cdot x\cdot\left(L-x\right)}{2}"></span></div><div class="ws-line"><span class="tex" data-tex="\int_{0}^{L}M\left(x\right)\,\mathrm{d}x\rightarrow"></span> <span class="tex ws-result" data-tex="\frac{L^{3}\cdot q}{12}"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<p>The keywords (expand, factor, solve, substitute, series, collect, parfrac, assume, float) are in the <a href="functions.html#symbolic">function reference</a>.</p>
+
+<h2 id="calculus">Integrals, sums and derivatives</h2>
+<p>With <code>=</code>, integrals, sums and derivatives are worked out numerically; with <code>→</code>, exactly.</p>
+<h3 id="ref-calculus">Calculus</h3><div class="ref"><div class="ref-row"><div class="ref-label">Σ</div><div class="ref-tip">Finite sum: index = first value, last value at the top, then the term</div><div class="ref-example"><span class="tex" data-tex="\sum_{i=1}^{4}\left(i^2\right)= 30"></span></div></div><div class="ref-row"><div class="ref-label">∫</div><div class="ref-tip">Definite integral, evaluated numerically: lower and upper bound, integrand, then the variable after d</div><div class="ref-example"><span class="tex" data-tex="\int_{0}^{1}\left(x^2\right)\,\mathrm{d}x= 0.333333"></span></div></div><div class="ref-row"><div class="ref-label">d/dx</div><div class="ref-tip">Derivative: with = its slope at the variable’s value above; with → its formula (Ctrl+.)</div><div class="ref-example"><span class="tex" data-tex="\frac{\mathrm{d}}{\mathrm{d}t}t^3\rightarrow 3\cdot t^{2}"></span></div></div><div class="ref-row"><div class="ref-label">lim</div><div class="ref-tip">Limit, with →: lim x→0 sin(x)/x → 1; x→∞ for infinity</div><div class="ref-example"><span class="tex" data-tex="\lim_{t\to0}\frac{\sin\left(t\right)}{t}\rightarrow 1"></span></div></div><div class="ref-row"><div class="ref-label">∫ dx</div><div class="ref-tip">Integral without limits, with →: its formula (an antiderivative)</div><div class="ref-example"><span class="tex" data-tex="\int t^2\,\mathrm{d}t\rightarrow \frac{t^{3}}{3}"></span></div></div></div>
+
+<h2 id="solve-functions">Solving in a formula</h2>
+<p>Functions such as <code>root</code>, <code>minimize</code>, <code>maximize</code>, <code>lsolve</code>, <code>polyroots</code> and <code>eigenvals</code> solve inside any formula.</p>
+<figure class="ws"><div class="ws-caption">The root of a cubic between 1 and 3</div><div class="ws-line"><span class="tex" data-tex="f\left(x\right)\coloneq x^3-2\cdot x-5"></span></div><div class="ws-line"><span class="tex" data-tex="\operatorname{root}\left(f\left(x\right),x,1,3\right)="></span> <span class="tex ws-result" data-tex="2.095"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+
+<h2 id="solver">The equation solver</h2>
+<p><strong>Insert › Equation solver</strong> (or Calculus › Equation solver; on the phone, <strong>Solve</strong> on the bar) adds a solver card. Type the equation and the unknown; the answer becomes a variable for the formulas below.</p>
+<figure class="shot-figure narrow"><img src="../images/zoom-solver.webp" width="535" height="500" alt="A solver card: x³ − 2x − 5 = 0 solved for x, x₀ = 2.095, with the method, the iterations, the leftover and a check that the equation holds." loading="lazy"></figure>
+<ul>
+<li><strong>Modes</strong> (Settings): numerical (from a guess or between bounds), analytical (exact), root search (every sign change in an interval), optimise (minimum or maximum, with constraints, integer or list choices) and least squares (best fit).</li>
+<li><strong>Systems</strong>: several equations and unknowns together.</li>
+<li><strong>Check at the solution</strong>: each equation is put back with the answer, so you see that it holds.</li>
+<li><strong>Sensitivity</strong>: how much the answer changes when each input changes by 1 %.</li>
+<li><strong>Sweep</strong>: solve again over a range of one input, as a table.</li>
+</ul>
+<p>Linear systems can also be solved exactly in one formula: <code>solve([eq1; eq2], [x; y]) →</code>. Differential equations: <code>rkfixed</code> and <code>Rkadapt</code>.</p>
+
+<h2 id="fitting">Curve fitting and interpolation</h2>
+<h3 id="ref-curve-fitting">Curve fitting</h3><div class="ref"><div class="ref-row"><div class="ref-label">line</div><div class="ref-tip">The least-squares line through points: line(vx, vy) gives its intercept and slope</div><div class="ref-example"><span class="tex" data-tex="\operatorname{line}\left(\begin{bmatrix}0\\1\\2\end{bmatrix},\begin{bmatrix}1\\3\\5\end{bmatrix}\right)= \begin{bmatrix}1\\2\end{bmatrix}"></span></div></div><div class="ref-row"><div class="ref-label">slope</div><div class="ref-tip">The slope of the least-squares line through points (vx, vy), e.g. a stiffness from test data</div><div class="ref-example"><span class="tex" data-tex="\operatorname{slope}\left(\begin{bmatrix}0\\1\\2\end{bmatrix},\begin{bmatrix}1\\3\\5\end{bmatrix}\right)= 2"></span></div></div><div class="ref-row"><div class="ref-label">intercept</div><div class="ref-tip">Where the least-squares line through points (vx, vy) crosses x = 0</div><div class="ref-example"><span class="tex" data-tex="\operatorname{intercept}\left(\begin{bmatrix}0\\1\\2\end{bmatrix},\begin{bmatrix}1\\3\\5\end{bmatrix}\right)= 1"></span></div></div><div class="ref-row"><div class="ref-label">polyfit</div><div class="ref-tip">The least-squares polynomial of degree n through points: polyfit(vx, vy, n) gives its coefficients, the constant first</div><div class="ref-example"><span class="tex" data-tex="\operatorname{polyfit}\left(\begin{bmatrix}0\\1\\2\\3\end{bmatrix},\begin{bmatrix}1\\3\\9\\19\end{bmatrix},2\right)= \begin{bmatrix}1\\0\\2\end{bmatrix}"></span></div></div><div class="ref-row"><div class="ref-label">linterp</div><div class="ref-tip">Linear interpolation in a table: linterp(vx, vy, x), the x values increasing</div><div class="ref-example"><span class="tex" data-tex="\operatorname{linterp}\left(\begin{bmatrix}0\\1\\2\end{bmatrix},\begin{bmatrix}0\\2\\6\end{bmatrix},1.5\right)= 4"></span></div></div><div class="ref-row"><div class="ref-label">interp</div><div class="ref-tip">Smooth interpolation by a natural cubic spline: interp(lspline(vx, vy), vx, vy, x)</div><div class="ref-example"><span class="tex" data-tex="\operatorname{interp}\left(\operatorname{lspline}\left(\begin{bmatrix}0\\1\\2\\3\end{bmatrix},\begin{bmatrix}0\\1\\4\\9\end{bmatrix}\right),\begin{bmatrix}0\\1\\2\\3\end{bmatrix},\begin{bmatrix}0\\1\\4\\9\end{bmatrix},1.5\right)= 2.2"></span></div></div></div>
+
+<h2 id="random">Random numbers</h2>
+<p><code>rnd(x)</code>, <code>runif(m, a, b)</code> and <code>rnorm(m, μ, σ)</code> give random numbers. Each line keeps its own sequence, so values stay put until you change that line (or <code>SEED</code>).</p>
+
+      <nav class="pager"><a href="functions.html">← Function reference</a><a href="plots.html">Plots, sketches and pictures →</a></nav>
+    </main>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt="" width="24" height="24">Open Calculation Platform</a>
+      <span><a href="index.html">Guide</a> · <a href="../directory.html">Directory</a> · <a href="../privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script>
+    document.querySelectorAll(".tex").forEach(function (el) {
+      try { katex.render(el.dataset.tex, el, { throwOnError: false, strict: false }); } catch (e) { el.textContent = el.dataset.tex; }
+    });
+  </script>
+</body>
+</html>

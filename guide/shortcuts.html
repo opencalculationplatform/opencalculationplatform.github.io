@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keyboard shortcuts · OCP Guide</title>
+  <meta name="description" content="Work faster on Windows: the keys for files, editing and typing formulas.">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="../#features">Features</a>
+        <a href="../directory.html">Directory</a>
+        <a href="index.html" aria-current="page">Guide</a>
+        <a class="nav-cta" href="../#download">Download</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap docs">
+    <aside class="docs-nav">
+      <details open><summary>Guide</summary><nav><a href="index.html">Getting started</a><a href="formulas.html">Formulas</a><a href="units.html">Units</a><a href="functions.html">Function reference</a><a href="math.html">Matrices, symbolic math and solving</a><a href="plots.html">Plots, sketches and pictures</a><a href="inputs.html">Inputs, tables and data</a><a href="pages.html">Text, layout and organisation</a><a href="reports.html">Reports and Mathcad files</a><a href="extend.html">Components, tables, Python and the directory</a><a href="phone.html">The phone app</a><a href="shortcuts.html" aria-current="page">Keyboard shortcuts</a></nav></details>
+    </aside>
+    <main class="docs-main">
+      <p class="kicker">OCP Guide</p>
+      <h1>Keyboard shortcuts</h1>
+      <p class="docs-lead">Work faster on Windows: the keys for files, editing and typing formulas.</p>
+      <div class="on-page"><strong>On this page</strong><a href="#files">Files and calculation</a><a href="#editing">Editing</a><a href="#formulas">In a formula</a></div>
+      
+<h2 id="files">Files and calculation</h2>
+<table class="plain">
+<tr><td><kbd>Ctrl+N</kbd></td><td>New worksheet</td></tr>
+<tr><td><kbd>Ctrl+O</kbd></td><td>Open</td></tr>
+<tr><td><kbd>Ctrl+S</kbd> / <kbd>Ctrl+Shift+S</kbd></td><td>Save / Save As</td></tr>
+<tr><td><kbd>Ctrl+W</kbd></td><td>Close the worksheet</td></tr>
+<tr><td><kbd>F9</kbd></td><td>Calculate now (when Automatic is off)</td></tr>
+</table>
+
+<h2 id="editing">Editing</h2>
+<table class="plain">
+<tr><td><kbd>Ctrl+Z</kbd> / <kbd>Ctrl+Y</kbd></td><td>Undo / Redo</td></tr>
+<tr><td><kbd>Ctrl+A</kbd></td><td>Select every region</td></tr>
+<tr><td><kbd>Ctrl+C</kbd>, <kbd>Ctrl+X</kbd>, <kbd>Ctrl+V</kbd></td><td>Copy, cut, paste (a picture too)</td></tr>
+<tr><td><kbd>Delete</kbd></td><td>Delete the selected regions</td></tr>
+<tr><td><kbd>Ctrl+Delete</kbd></td><td>Remove the region being edited</td></tr>
+<tr><td><kbd>Ctrl+E</kbd></td><td>Disable or enable the selected regions</td></tr>
+<tr><td><kbd>Ctrl+F</kbd> / <kbd>Ctrl+H</kbd></td><td>Find / Replace</td></tr>
+<tr><td><kbd>Ctrl</kbd>+click</td><td>Follow a hyperlink</td></tr>
+</table>
+
+<h2 id="formulas">In a formula</h2>
+<table class="plain">
+<tr><td><kbd>:</kbd></td><td><code>:=</code> definition</td></tr>
+<tr><td><kbd>~</kbd></td><td><code>≡</code> global definition</td></tr>
+<tr><td><kbd>=</kbd></td><td>show the result</td></tr>
+<tr><td><kbd>/</kbd> <kbd>^</kbd> <kbd>_</kbd> <kbd>*</kbd></td><td>fraction, power, subscript, multiplication</td></tr>
+<tr><td><kbd>→</kbd> <kbd>←</kbd></td><td>leave a power, subscript or fraction; move</td></tr>
+<tr><td><kbd>..</kbd></td><td>range <code>1..10</code></td></tr>
+<tr><td><kbd>"</kbd> in an empty formula</td><td>turn it into text</td></tr>
+<tr><td><kbd>Enter</kbd></td><td>a new formula below</td></tr>
+<tr><td><kbd>Tab</kbd></td><td>a new formula to the right</td></tr>
+<tr><td>a name such as <code>alpha</code>, <code>sqrt</code>, <code>sum</code>, <code>int</code></td><td>α, √, Σ, ∫</td></tr>
+</table>
+<p><strong>View › Shortcuts…</strong> lists every typing shortcut; you can change, remove or add your own. <strong>View › Formula shortcuts</strong> turns them off.</p>
+
+      <nav class="pager"><a href="phone.html">← The phone app</a><span></span></nav>
+    </main>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt="" width="24" height="24">Open Calculation Platform</a>
+      <span><a href="index.html">Guide</a> · <a href="../directory.html">Directory</a> · <a href="../privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script>
+    document.querySelectorAll(".tex").forEach(function (el) {
+      try { katex.render(el.dataset.tex, el, { throwOnError: false, strict: false }); } catch (e) { el.textContent = el.dataset.tex; }
+    });
+  </script>
+</body>
+</html>

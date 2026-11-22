@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plots, sketches and pictures · OCP Guide</title>
+  <meta name="description" content="Charts, engineering diagrams, bars, polar and contour plots, 3D surfaces, sketches whose sizes are formulas, and pictures.">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="../#features">Features</a>
+        <a href="../directory.html">Directory</a>
+        <a href="index.html" aria-current="page">Guide</a>
+        <a class="nav-cta" href="../#download">Download</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap docs">
+    <aside class="docs-nav">
+      <details open><summary>Guide</summary><nav><a href="index.html">Getting started</a><a href="formulas.html">Formulas</a><a href="units.html">Units</a><a href="functions.html">Function reference</a><a href="math.html">Matrices, symbolic math and solving</a><a href="plots.html" aria-current="page">Plots, sketches and pictures</a><a href="inputs.html">Inputs, tables and data</a><a href="pages.html">Text, layout and organisation</a><a href="reports.html">Reports and Mathcad files</a><a href="extend.html">Components, tables, Python and the directory</a><a href="phone.html">The phone app</a><a href="shortcuts.html">Keyboard shortcuts</a></nav></details>
+    </aside>
+    <main class="docs-main">
+      <p class="kicker">OCP Guide</p>
+      <h1>Plots, sketches and pictures</h1>
+      <p class="docs-lead">Charts, engineering diagrams, bars, polar and contour plots, 3D surfaces, sketches whose sizes are formulas, and pictures.</p>
+      <div class="on-page"><strong>On this page</strong><a href="#plots">Plots</a><a href="#sketches">Sketches</a><a href="#pictures">Pictures</a></div>
+      
+<h2 id="plots">Plots</h2>
+<p><strong>Insert › Plot</strong> (phone: <strong>Plot</strong> on the bar). A new plot takes the formula you were typing or last edited: <code>f(x) := …</code> is plotted from 0 to 10, which you can change. Plots update whenever their inputs change.</p>
+<figure class="shot-figure"><img src="../images/zoom-diagram.webp" width="990" height="370" alt="A bending moment diagram beside the beam check that drives it." loading="lazy"></figure>
+<p>In the plot editor (<strong>Edit plot</strong>):</p>
+<ul>
+<li><strong>What is plotted</strong>: functions of a variable from a start to an end, vectors of data (x and y), parametric curves (x(t), y(t)), or a surface z(x, y). Several series in one plot, each with a label.</li>
+<li><strong>Style</strong>: chart, engineering diagram (filled, with the positive side below, the maximum marked), bars, polar, contour map or 3D surface.</li>
+<li><strong>Axes</strong>: titles, units, limits and reference lines. Units on the axes follow the worksheet's.</li>
+<li>A plot over a range variable uses the range's points.</li>
+</ul>
+<figure class="shot-figure narrow"><img src="../images/zoom-surface.webp" width="500" height="390" alt="A 3D surface plot of z = sin x · cos y." loading="lazy"></figure>
+<p>Drag the corner to resize a plot. 3D surfaces turn with the mouse or a finger.</p>
+
+<h2 id="sketches">Sketches</h2>
+<p><strong>Insert › Sketch</strong> draws lines, arrows, dimensions, rectangles, circles, triangles, supports and text whose positions, sizes and labels can be formulas: <code>L</code>, <code>L/2</code>, <code>{w}</code>. Change the span and the drawing follows. Snapping follows the shapes.</p>
+
+<h2 id="pictures">Pictures</h2>
+<p><strong>Insert › Picture</strong> adds a PNG, JPEG or GIF, kept inside the worksheet. You can also drop a picture on the page or paste one with <kbd>Ctrl+V</kbd>.</p>
+
+      <nav class="pager"><a href="math.html">← Matrices, symbolic math and solving</a><a href="inputs.html">Inputs, tables and data →</a></nav>
+    </main>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt="" width="24" height="24">Open Calculation Platform</a>
+      <span><a href="index.html">Guide</a> · <a href="../directory.html">Directory</a> · <a href="../privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script>
+    document.querySelectorAll(".tex").forEach(function (el) {
+      try { katex.render(el.dataset.tex, el, { throwOnError: false, strict: false }); } catch (e) { el.textContent = el.dataset.tex; }
+    });
+  </script>
+</body>
+</html>
