@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simply supported beam: moment, shear and deflection · Open Calculation Platform (OCP)</title>
+  <meta name="description" content="Bending moment, support shear and mid-span deflection of a simply supported beam under a uniform load, with the IPE section&#x27;s Iy taken from a table.">
+  <link rel="canonical" href="https://opencalculationplatform.github.io/examples/beam.html">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="../#features">Features</a>
+        <a href="../directory.html">Directory</a>
+        <a href="../guide/index.html">Guide</a>
+        <a href="../examples/index.html" aria-current="page">Examples</a>
+        <a class="nav-cta" href="../#download">Download</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap docs">
+    <aside class="docs-nav">
+      <details open><summary>Examples</summary><nav><a href="index.html">Worked examples</a><a href="beam.html" aria-current="page">Simply supported beam: moment, shear and deflection</a><a href="column-buckling.html">Steel column flexural buckling (EN 1993-1-1)</a><a href="footing.html">Pad footing under an eccentric load</a><a href="rc-beam.html">Reinforced concrete beam: bending reinforcement (EN 1992-1-1)</a><a href="shaft.html">Shaft in torsion: shear stress and angle of twist</a><a href="spring.html">Helical compression spring: stiffness and deflection</a><a href="ac-power.html">AC circuit: current, power and power factor</a><a href="voltage-drop.html">Cable voltage drop and losses</a><a href="pipe-flow.html">Pipe flow: Reynolds number and pressure drop</a><a href="wall-heat.html">Heat loss through a wall: U-value</a><a href="maths.html">Maths for students: solve, differentiate, integrate</a><a href="statistics.html">Statistics and a straight-line fit</a></nav></details>
+    </aside>
+    <main class="docs-main">
+      <p class="kicker">OCP Examples</p>
+      <h1>Simply supported beam: moment, shear and deflection</h1>
+      <p class="docs-lead">Bending moment, support shear and mid-span deflection of a simply supported beam under a uniform load, with the IPE section's Iy taken from a table.</p>
+      
+      
+<p>A steel floor beam spans 6 m and carries 10 kN/m. Its second moment of area comes straight from the <a href="../tables/ipe.html">IPE table</a>; OCP keeps the units, so the deflection comes out in millimetres.</p>
+<figure class="ws"><div class="ws-caption">Moment wL²/8, shear wL/2, deflection 5wL⁴/(384EI), and a span/250 check</div><div class="ws-line"><span class="tex" data-tex="L\coloneq 6\,\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="w\coloneq 10\,\mathrm{kN}/\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="E\coloneq 210\,\mathrm{GPa}"></span></div><div class="ws-line"><span class="tex" data-tex="I_{y}\coloneq IPE\left(\text{&quot;IPE 300&quot;},\text{&quot;Iy&quot;}\right)="></span> <span class="tex ws-result" data-tex="8.357\times10^{7}\,\mathrm{mm}^{4}"></span></div><div class="ws-line"><span class="tex" data-tex="M_{max}\coloneq\frac{w\cdot L^2}{8}="></span> <span class="tex ws-result" data-tex="45\,\mathrm{kN}\cdot\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="V_{max}\coloneq\frac{w\cdot L}{2}="></span> <span class="tex ws-result" data-tex="30\,\mathrm{kN}"></span></div><div class="ws-line"><span class="tex" data-tex="\delta_{max}\coloneq\frac{5\cdot w\cdot L^4}{384\cdot E\cdot I_{y}}="></span> <span class="tex ws-result" data-tex="9.616\,\mathrm{mm}"></span></div><div class="ws-line"><span class="tex" data-tex="\frac{\delta_{max}}{L}\le\frac{1}{250}="></span> <span class="tex ws-result" data-tex="1"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<p>The last line is a check: 1 means it holds. Change the section to <code>"IPE 270"</code> or the load, and every line updates.</p>
+<div class="try"><strong>Try it in OCP.</strong> Type these formulas in a new worksheet, change any value, and every result updates, with its unit. <a href="../#download">Download OCP, free</a>.</div>
+      <nav class="pager"><a href="index.html">← Worked examples</a><a href="column-buckling.html">Steel column flexural buckling (EN 1993-1-1) →</a></nav>
+    </main>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt="" width="24" height="24">Open Calculation Platform</a>
+      <span><a href="../guide/index.html">Guide</a> · <a href="../examples/index.html">Examples</a> · <a href="../tables/index.html">Tables</a> · <a href="../directory.html">Directory</a> · <a href="../privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+    <p class="wrap legal">Mathcad and Mathcad Prime are trademarks or registered trademarks of PTC Inc. Open Calculation Platform is an independent product, not affiliated with, endorsed or sponsored by PTC.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script>
+    document.querySelectorAll(".tex").forEach(function (el) {
+      try { katex.render(el.dataset.tex, el, { throwOnError: false, strict: false }); } catch (e) { el.textContent = el.dataset.tex; }
+    });
+  </script>
+</body>
+</html>

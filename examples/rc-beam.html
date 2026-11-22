@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reinforced concrete beam: bending reinforcement (EN 1992-1-1) · Open Calculation Platform (OCP)</title>
+  <meta name="description" content="Tension reinforcement of a rectangular reinforced concrete beam in bending with the simplified rectangular stress block, and the bars to provide.">
+  <link rel="canonical" href="https://opencalculationplatform.github.io/examples/rc-beam.html">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="../#features">Features</a>
+        <a href="../directory.html">Directory</a>
+        <a href="../guide/index.html">Guide</a>
+        <a href="../examples/index.html" aria-current="page">Examples</a>
+        <a class="nav-cta" href="../#download">Download</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap docs">
+    <aside class="docs-nav">
+      <details open><summary>Examples</summary><nav><a href="index.html">Worked examples</a><a href="beam.html">Simply supported beam: moment, shear and deflection</a><a href="column-buckling.html">Steel column flexural buckling (EN 1993-1-1)</a><a href="footing.html">Pad footing under an eccentric load</a><a href="rc-beam.html" aria-current="page">Reinforced concrete beam: bending reinforcement (EN 1992-1-1)</a><a href="shaft.html">Shaft in torsion: shear stress and angle of twist</a><a href="spring.html">Helical compression spring: stiffness and deflection</a><a href="ac-power.html">AC circuit: current, power and power factor</a><a href="voltage-drop.html">Cable voltage drop and losses</a><a href="pipe-flow.html">Pipe flow: Reynolds number and pressure drop</a><a href="wall-heat.html">Heat loss through a wall: U-value</a><a href="maths.html">Maths for students: solve, differentiate, integrate</a><a href="statistics.html">Statistics and a straight-line fit</a></nav></details>
+    </aside>
+    <main class="docs-main">
+      <p class="kicker">OCP Examples</p>
+      <h1>Reinforced concrete beam: bending reinforcement (EN 1992-1-1)</h1>
+      <p class="docs-lead">Tension reinforcement of a rectangular reinforced concrete beam in bending with the simplified rectangular stress block, and the bars to provide.</p>
+      
+      
+<p>A 300 × 450 mm effective section in C30/37 carries 150 kN·m. The concrete strength comes from the <a href="../tables/concrete.html">concrete table</a>, the area of five 16 mm bars from the <a href="../tables/rebar.html">rebar table</a>.</p>
+<figure class="ws"><div class="ws-caption">K, lever arm z, required As and the bars provided</div><div class="ws-line"><span class="tex" data-tex="M_{Ed}\coloneq 150\,\mathrm{kN}\cdot\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="b\coloneq 300\,\mathrm{mm}"></span></div><div class="ws-line"><span class="tex" data-tex="d\coloneq 450\,\mathrm{mm}"></span></div><div class="ws-line"><span class="tex" data-tex="f_{ck}\coloneq Concrete\left(\text{&quot;C30/37&quot;},\text{&quot;fck&quot;}\right)="></span> <span class="tex ws-result" data-tex="30\,\mathrm{MPa}"></span></div><div class="ws-line"><span class="tex" data-tex="f_{yk}\coloneq 500\,\mathrm{MPa}"></span></div><div class="ws-line"><span class="tex" data-tex="K\coloneq\frac{M_{Ed}}{b\cdot d^2\cdot f_{ck}}="></span> <span class="tex ws-result" data-tex="0.0823"></span></div><div class="ws-line"><span class="tex" data-tex="z\coloneq d\cdot\min\left(0.5+\sqrt{0.25-\frac{K}{1.134}},0.95\right)="></span> <span class="tex ws-result" data-tex="414.5\,\mathrm{mm}"></span></div><div class="ws-line"><span class="tex" data-tex="A_{s}\coloneq\frac{M_{Ed}}{0.87\cdot f_{yk}\cdot z}="></span> <span class="tex ws-result" data-tex="831.8\,\mathrm{mm}^{2}"></span></div><div class="ws-line"><span class="tex" data-tex="A_{s,prov}\coloneq Rebar\left(16,\text{&quot;A5&quot;}\right)="></span> <span class="tex ws-result" data-tex="1005\,\mathrm{mm}^{2}"></span></div><div class="ws-line"><span class="tex" data-tex="A_{s,prov}\ge A_{s}="></span> <span class="tex ws-result" data-tex="1"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<p>Valid while K ≤ 0.167, when no compression reinforcement is needed.</p>
+<div class="try"><strong>Try it in OCP.</strong> Type these formulas in a new worksheet, change any value, and every result updates, with its unit. <a href="../#download">Download OCP, free</a>.</div>
+      <nav class="pager"><a href="footing.html">← Pad footing under an eccentric load</a><a href="shaft.html">Shaft in torsion: shear stress and angle of twist →</a></nav>
+    </main>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt="" width="24" height="24">Open Calculation Platform</a>
+      <span><a href="../guide/index.html">Guide</a> · <a href="../examples/index.html">Examples</a> · <a href="../tables/index.html">Tables</a> · <a href="../directory.html">Directory</a> · <a href="../privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+    <p class="wrap legal">Mathcad and Mathcad Prime are trademarks or registered trademarks of PTC Inc. Open Calculation Platform is an independent product, not affiliated with, endorsed or sponsored by PTC.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script>
+    document.querySelectorAll(".tex").forEach(function (el) {
+      try { katex.render(el.dataset.tex, el, { throwOnError: false, strict: false }); } catch (e) { el.textContent = el.dataset.tex; }
+    });
+  </script>
+</body>
+</html>

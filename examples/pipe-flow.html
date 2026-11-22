@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pipe flow: Reynolds number and pressure drop · Open Calculation Platform (OCP)</title>
+  <meta name="description" content="Flow velocity, Reynolds number, Darcy friction factor (Swamee–Jain) and pressure drop of water in a pipe.">
+  <link rel="canonical" href="https://opencalculationplatform.github.io/examples/pipe-flow.html">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="../#features">Features</a>
+        <a href="../directory.html">Directory</a>
+        <a href="../guide/index.html">Guide</a>
+        <a href="../examples/index.html" aria-current="page">Examples</a>
+        <a class="nav-cta" href="../#download">Download</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap docs">
+    <aside class="docs-nav">
+      <details open><summary>Examples</summary><nav><a href="index.html">Worked examples</a><a href="beam.html">Simply supported beam: moment, shear and deflection</a><a href="column-buckling.html">Steel column flexural buckling (EN 1993-1-1)</a><a href="footing.html">Pad footing under an eccentric load</a><a href="rc-beam.html">Reinforced concrete beam: bending reinforcement (EN 1992-1-1)</a><a href="shaft.html">Shaft in torsion: shear stress and angle of twist</a><a href="spring.html">Helical compression spring: stiffness and deflection</a><a href="ac-power.html">AC circuit: current, power and power factor</a><a href="voltage-drop.html">Cable voltage drop and losses</a><a href="pipe-flow.html" aria-current="page">Pipe flow: Reynolds number and pressure drop</a><a href="wall-heat.html">Heat loss through a wall: U-value</a><a href="maths.html">Maths for students: solve, differentiate, integrate</a><a href="statistics.html">Statistics and a straight-line fit</a></nav></details>
+    </aside>
+    <main class="docs-main">
+      <p class="kicker">OCP Examples</p>
+      <h1>Pipe flow: Reynolds number and pressure drop</h1>
+      <p class="docs-lead">Flow velocity, Reynolds number, Darcy friction factor (Swamee–Jain) and pressure drop of water in a pipe.</p>
+      
+      
+<p>12 L/s of water through 50 m of 100 mm pipe. The friction factor uses the Swamee–Jain approximation of the Colebrook equation; OCP's <code>log</code> is base 10.</p>
+<figure class="ws"><div class="ws-caption">v, Re, f and Δp = f·(L/D)·ρv²/2</div><div class="ws-line"><span class="tex" data-tex="Q\coloneq 12\,\mathrm{L}/\mathrm{s}"></span></div><div class="ws-line"><span class="tex" data-tex="D\coloneq 100\,\mathrm{mm}"></span></div><div class="ws-line"><span class="tex" data-tex="\rho\coloneq 998\,\mathrm{kg}/\mathrm{m}^{3}"></span></div><div class="ws-line"><span class="tex" data-tex="\mu\coloneq 0.001\,\mathrm{Pa}\cdot\mathrm{s}"></span></div><div class="ws-line"><span class="tex" data-tex="\varepsilon\coloneq 0.045\,\mathrm{mm}"></span></div><div class="ws-line"><span class="tex" data-tex="L\coloneq 50\,\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="v\coloneq\frac{Q}{\frac{\pi\cdot D^2}{4}}="></span> <span class="tex ws-result" data-tex="1.528\,\mathrm{m}/\mathrm{s}"></span></div><div class="ws-line"><span class="tex" data-tex="Re\coloneq\frac{\rho\cdot v\cdot D}{\mu}="></span> <span class="tex ws-result" data-tex="1.525\times10^{5}"></span></div><div class="ws-line"><span class="tex" data-tex="f\coloneq\frac{0.25}{\left(\log\left(\frac{\varepsilon}{3.7\cdot D}+\frac{5.74}{Re^{0.9}}\right)\right)^2}="></span> <span class="tex ws-result" data-tex="0.01919"></span></div><div class="ws-line"><span class="tex" data-tex="\Delta p\coloneq f\cdot\frac{L}{D}\cdot\frac{\rho\cdot v^2}{2}"></span></div><div class="ws-line"><span class="tex" data-tex="\Delta p="></span> <span class="tex ws-result" data-tex="11.18\,\mathrm{kPa}"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<div class="try"><strong>Try it in OCP.</strong> Type these formulas in a new worksheet, change any value, and every result updates, with its unit. <a href="../#download">Download OCP, free</a>.</div>
+      <nav class="pager"><a href="voltage-drop.html">← Cable voltage drop and losses</a><a href="wall-heat.html">Heat loss through a wall: U-value →</a></nav>
+    </main>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt="" width="24" height="24">Open Calculation Platform</a>
+      <span><a href="../guide/index.html">Guide</a> · <a href="../examples/index.html">Examples</a> · <a href="../tables/index.html">Tables</a> · <a href="../directory.html">Directory</a> · <a href="../privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+    <p class="wrap legal">Mathcad and Mathcad Prime are trademarks or registered trademarks of PTC Inc. Open Calculation Platform is an independent product, not affiliated with, endorsed or sponsored by PTC.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script>
+    document.querySelectorAll(".tex").forEach(function (el) {
+      try { katex.render(el.dataset.tex, el, { throwOnError: false, strict: false }); } catch (e) { el.textContent = el.dataset.tex; }
+    });
+  </script>
+</body>
+</html>

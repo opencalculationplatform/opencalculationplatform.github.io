@@ -3,16 +3,36 @@
   <url><loc>https://opencalculationplatform.github.io/</loc><lastmod>2026-11-23</lastmod><priority>1.0</priority></url>
   <url><loc>https://opencalculationplatform.github.io/directory.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
   <url><loc>https://opencalculationplatform.github.io/privacy.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
-  <url><loc>https://opencalculationplatform.github.io/guide/index.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
-  <url><loc>https://opencalculationplatform.github.io/guide/formulas.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
-  <url><loc>https://opencalculationplatform.github.io/guide/units.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
-  <url><loc>https://opencalculationplatform.github.io/guide/functions.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
-  <url><loc>https://opencalculationplatform.github.io/guide/math.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
-  <url><loc>https://opencalculationplatform.github.io/guide/plots.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
-  <url><loc>https://opencalculationplatform.github.io/guide/inputs.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
-  <url><loc>https://opencalculationplatform.github.io/guide/pages.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
-  <url><loc>https://opencalculationplatform.github.io/guide/reports.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
   <url><loc>https://opencalculationplatform.github.io/guide/extend.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/guide/formulas.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/guide/functions.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/guide/index.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/guide/inputs.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/guide/math.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/guide/pages.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
   <url><loc>https://opencalculationplatform.github.io/guide/phone.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/guide/plots.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/guide/reports.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
   <url><loc>https://opencalculationplatform.github.io/guide/shortcuts.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/guide/units.html</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/examples/ac-power.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/examples/beam.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/examples/column-buckling.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/examples/footing.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/examples/index.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/examples/maths.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/examples/pipe-flow.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/examples/rc-beam.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/examples/shaft.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/examples/spring.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/examples/statistics.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/examples/voltage-drop.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/examples/wall-heat.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/tables/concrete.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/tables/hea.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/tables/heb.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/tables/index.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/tables/ipe.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/tables/rebar.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://opencalculationplatform.github.io/tables/steel-grades.html</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
 </urlset>

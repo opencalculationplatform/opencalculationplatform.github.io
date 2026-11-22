@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shaft in torsion: shear stress and angle of twist · Open Calculation Platform (OCP)</title>
+  <meta name="description" content="Polar moment of area, maximum shear stress and angle of twist of a solid circular shaft under torque.">
+  <link rel="canonical" href="https://opencalculationplatform.github.io/examples/shaft.html">
+  <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="../#features">Features</a>
+        <a href="../directory.html">Directory</a>
+        <a href="../guide/index.html">Guide</a>
+        <a href="../examples/index.html" aria-current="page">Examples</a>
+        <a class="nav-cta" href="../#download">Download</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap docs">
+    <aside class="docs-nav">
+      <details open><summary>Examples</summary><nav><a href="index.html">Worked examples</a><a href="beam.html">Simply supported beam: moment, shear and deflection</a><a href="column-buckling.html">Steel column flexural buckling (EN 1993-1-1)</a><a href="footing.html">Pad footing under an eccentric load</a><a href="rc-beam.html">Reinforced concrete beam: bending reinforcement (EN 1992-1-1)</a><a href="shaft.html" aria-current="page">Shaft in torsion: shear stress and angle of twist</a><a href="spring.html">Helical compression spring: stiffness and deflection</a><a href="ac-power.html">AC circuit: current, power and power factor</a><a href="voltage-drop.html">Cable voltage drop and losses</a><a href="pipe-flow.html">Pipe flow: Reynolds number and pressure drop</a><a href="wall-heat.html">Heat loss through a wall: U-value</a><a href="maths.html">Maths for students: solve, differentiate, integrate</a><a href="statistics.html">Statistics and a straight-line fit</a></nav></details>
+    </aside>
+    <main class="docs-main">
+      <p class="kicker">OCP Examples</p>
+      <h1>Shaft in torsion: shear stress and angle of twist</h1>
+      <p class="docs-lead">Polar moment of area, maximum shear stress and angle of twist of a solid circular shaft under torque.</p>
+      
+      
+<p>A 60 mm solid steel shaft, 1.2 m long, transmits 2.5 kN·m. OCP shows the twist in radians, and in degrees when asked with <code>θ = deg</code>.</p>
+<figure class="ws"><div class="ws-caption">J = πd⁴/32, τ = T·r/J, θ = TL/(GJ)</div><div class="ws-line"><span class="tex" data-tex="T\coloneq 2.5\,\mathrm{kN}\cdot\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="d\coloneq 60\,\mathrm{mm}"></span></div><div class="ws-line"><span class="tex" data-tex="L\coloneq 1.2\,\mathrm{m}"></span></div><div class="ws-line"><span class="tex" data-tex="G\coloneq 80\,\mathrm{GPa}"></span></div><div class="ws-line"><span class="tex" data-tex="J\coloneq\frac{\pi\cdot d^4}{32}="></span> <span class="tex ws-result" data-tex="1.272\times10^{6}\,\mathrm{mm}^{4}"></span></div><div class="ws-line"><span class="tex" data-tex="\tau_{max}\coloneq\frac{T\cdot\frac{d}{2}}{J}="></span> <span class="tex ws-result" data-tex="58.95\,\mathrm{MPa}"></span></div><div class="ws-line"><span class="tex" data-tex="\theta\coloneq\frac{T\cdot L}{G\cdot J}="></span> <span class="tex ws-result" data-tex="0.02947"></span></div><div class="ws-line"><span class="tex" data-tex="\theta="></span> <span class="tex ws-result" data-tex="1.689\,\mathrm{deg}"></span></div><figcaption>Calculated by OCP</figcaption></figure>
+<div class="try"><strong>Try it in OCP.</strong> Type these formulas in a new worksheet, change any value, and every result updates, with its unit. <a href="../#download">Download OCP, free</a>.</div>
+      <nav class="pager"><a href="rc-beam.html">← Reinforced concrete beam: bending reinforcement (EN 1992-1-1)</a><a href="spring.html">Helical compression spring: stiffness and deflection →</a></nav>
+    </main>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../images/logo.svg" alt="" width="24" height="24">Open Calculation Platform</a>
+      <span><a href="../guide/index.html">Guide</a> · <a href="../examples/index.html">Examples</a> · <a href="../tables/index.html">Tables</a> · <a href="../directory.html">Directory</a> · <a href="../privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+    <p class="wrap legal">Mathcad and Mathcad Prime are trademarks or registered trademarks of PTC Inc. Open Calculation Platform is an independent product, not affiliated with, endorsed or sponsored by PTC.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script>
+    document.querySelectorAll(".tex").forEach(function (el) {
+      try { katex.render(el.dataset.tex, el, { throwOnError: false, strict: false }); } catch (e) { el.textContent = el.dataset.tex; }
+    });
+  </script>
+</body>
+</html>

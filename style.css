@@ -282,3 +282,17 @@ table.plain th { background: var(--code); font-size: 14px; }
 }
 
 footer .legal { display: block; margin-top: 14px; font-size: 12.5px; opacity: 0.85; }
+
+/* Examples and tables */
+.try { background: var(--blue-soft); border-radius: 14px; padding: 14px 18px; margin: 26px 0 8px; }
+.data-table { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--card); margin: 14px 0; }
+.data-table table { border-collapse: collapse; font-size: 14px; white-space: nowrap; }
+.data-table th, .data-table td { padding: 7px 12px; border-bottom: 1px solid var(--line); text-align: right; }
+.data-table th { background: var(--code); position: sticky; top: 0; font-size: 13px; }
+.data-table th:first-child, .data-table td:first-child { text-align: left; font-weight: 650; position: sticky; left: 0; background: var(--card); }
+.data-table th:first-child { background: var(--code); }
+.data-table tr:last-child td { border-bottom: none; }
+p.note { color: var(--muted); }
+
+.link-card { text-decoration: none; color: var(--ink); display: block; }
+.link-card h3 { color: var(--blue); }
