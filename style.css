@@ -280,3 +280,5 @@ table.plain th { background: var(--code); font-size: 14px; }
   .ref-row { grid-template-columns: 1fr; gap: 4px; }
   .units-group { grid-template-columns: 1fr; }
 }
+
+footer .legal { display: block; margin-top: 14px; font-size: 12.5px; opacity: 0.85; }
