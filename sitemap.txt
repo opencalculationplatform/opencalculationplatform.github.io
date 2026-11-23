@@ -34,3 +34,4 @@ https://opencalculationplatform.github.io/tables/ipe.html
 https://opencalculationplatform.github.io/tables/rebar.html
 https://opencalculationplatform.github.io/tables/steel-grades.html
 https://opencalculationplatform.github.io/roadmap.html
+https://opencalculationplatform.github.io/support.html

@@ -298,3 +298,11 @@ p.note { color: var(--muted); }
 .release ul { margin: 6px 0 0; padding-left: 20px; color: var(--muted); }
 .release li { margin: 5px 0; }
 @media (max-width: 900px) { .roadmap { grid-template-columns: 1fr; } }
+
+/* Support */
+.support-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.support-card h3 { font-size: 21px; margin: 6px 0 8px; }
+.support-card ul { color: var(--muted); padding-left: 20px; margin: 0; }
+.support-card li { margin: 6px 0; }
+.support-icon { font-size: 32px; }
+@media (max-width: 900px) { .support-grid { grid-template-columns: 1fr; } }
