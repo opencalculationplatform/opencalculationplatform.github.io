@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://opencalculationplatform.github.io/sitemap.xml
+Sitemap: https://opencalculationplatform.github.io/sitemap.txt
