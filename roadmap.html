@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roadmap · Open Calculation Platform (OCP)</title>
+  <meta name="description" content="What is new in Open Calculation Platform, what we are working on now, and what comes next.">
+  <link rel="canonical" href="https://opencalculationplatform.github.io/roadmap.html">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="images/logo.svg" alt=""><span>Open Calculation Platform</span></a>
+      <nav>
+        <a href="./#features">Features</a>
+        <a href="examples/index.html">Examples</a>
+        <a href="directory.html">Directory</a>
+        <a href="guide/index.html">Guide</a>
+        <a href="roadmap.html" aria-current="page">Roadmap</a>
+        <a class="nav-cta" href="./#download">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <p class="kicker">Roadmap</p>
+        <h1>Where OCP is going</h1>
+        <p>OCP grows with the people who use it. Here is what has shipped, what we are working on now, and what comes after. Plans change with your feedback: <a href="https://github.com/opencalculationplatform/ocp/issues">suggest a feature or report a problem</a>.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="roadmap">
+          <div class="lane now">
+            <div class="lane-head"><span class="dot"></span><h2>Now</h2><p>In progress</p></div>
+            <div class="item"><h3>OCP on Google Play</h3><p>Install and update the Android app from the Play Store, instead of the APK.</p></div>
+            <div class="item"><h3>More in the directory</h3><p>More tables and ready-made checks for every discipline: mechanical, electrical, fluids, thermal and structural.</p></div>
+            <div class="item"><h3>Report polish</h3><p>Formulas with an equation inside, such as <code>solve(…= 0, x) →</code>, printed whole in PDF and Word reports. Already fixed, in the next version.</p></div>
+          </div>
+
+          <div class="lane next">
+            <div class="lane-head"><span class="dot"></span><h2>Next</h2><p>Planned</p></div>
+            <div class="item"><h3>Open-source calculation engine</h3><p>OCP's engine (formulas, units, solvers, symbolic math) published as open source, so anyone can check how results are worked out.</p></div>
+            <div class="item"><h3>Plugins for developers</h3><p>A ready-made project template and documentation for writing OCP plugins in C#: new functions, calculation sections and components.</p></div>
+            <div class="item"><h3>More on the phone</h3><p>PDF reports from the phone, pictures from the camera, find and replace, and a dark theme.</p></div>
+            <div class="item"><h3>Your own web address</h3><p>A short, easy-to-share address for the website.</p></div>
+          </div>
+
+          <div class="lane later">
+            <div class="lane-head"><span class="dot"></span><h2>Later</h2><p>Ideas we are exploring</p></div>
+            <div class="item"><h3>AI help</h3><p>Describe a check in words, and OCP drafts the worksheet or component for you to review.</p></div>
+            <div class="item"><h3>Python on the phone</h3><p>Python functions and scripts on Android, as on Windows.</p></div>
+            <div class="item"><h3>iPhone and iPad</h3><p>OCP on iOS, with the same worksheets.</p></div>
+            <div class="item"><h3>OCP Pro</h3><p>OCP stays free. Advanced features marked Pro (Word export, Excel sheets, report contents) are free for everyone during early access; a paid Pro edition may come later.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head"><p class="kicker">Released</p><h2>Recently shipped</h2></div>
+        <div class="timeline">
+          <div class="release">
+            <div class="version">0.6.1</div>
+            <ul>
+              <li>Tables from Excel workbooks, and a viewer for every table.</li>
+              <li>About on the phone.</li>
+              <li>Fixes: worksheets with some directory components reopen after saving; the solver shows an equation equal to 0 as holding.</li>
+            </ul>
+          </div>
+          <div class="release">
+            <div class="version">0.6</div>
+            <ul>
+              <li><strong>Python functions</strong> (Windows): your own functions in Python, with units, in any formula.</li>
+              <li><strong>The directory</strong>: install components and tables shared by OCP users, and publish yours with one click.</li>
+            </ul>
+          </div>
+          <div class="release">
+            <div class="version">0.5</div>
+            <ul>
+              <li><strong>Components</strong>: any worksheet becomes a calculation block with a form and a report, without code; worked examples; components inside components.</li>
+              <li><strong>Tables as functions</strong>: <code>IPE("IPE 300", "A")</code>, with a drop-down of a table's rows.</li>
+              <li>Pro features marked, free during early access.</li>
+            </ul>
+          </div>
+          <div class="release">
+            <div class="version">0.4 and earlier</div>
+            <ul>
+              <li>The Android app: OCP's keypad, live answers, column view, touch editing.</li>
+              <li>Worksheets with units, plots, solvers, symbolic math, PDF and Word reports, and opening Mathcad Prime files.</li>
+            </ul>
+          </div>
+        </div>
+        <p style="text-align:center;margin-top:24px"><a href="https://github.com/opencalculationplatform/ocp/releases">Every version and its downloads →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Open Calculation Platform · free engineering calculations</span>
+      <span><a href="directory.html">Directory</a> · <a href="guide/index.html">Guide</a> · <a href="roadmap.html">Roadmap</a> · <a href="privacy.html">Privacy</a> · <a href="https://github.com/opencalculationplatform/ocp/issues">Contact</a></span>
+    </div>
+    <p class="wrap legal">Mathcad and Mathcad Prime are trademarks or registered trademarks of PTC Inc. Open Calculation Platform is an independent product, not affiliated with, endorsed or sponsored by PTC.</p>
+  </footer>
+</body>
+</html>
