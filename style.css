@@ -188,7 +188,7 @@ footer .brand { font-size: 15px; }
   section { padding: 54px 0; }
   .grid, .steps, .downloads, .items { grid-template-columns: 1fr; }
   .top nav { gap: 14px; }
-  .top nav a:not(.nav-cta):not([aria-current]) { display: none; }
+  .top nav a:not(.nav-cta):not(.nav-support):not([aria-current]) { display: none; }
   .brand span { display: none; }
   .showcase .phone { width: 34%; border-width: 6px; border-radius: 20px; }
   .media .float { width: 56%; }
@@ -306,3 +306,10 @@ p.note { color: var(--muted); }
 .support-card li { margin: 6px 0; }
 .support-icon { font-size: 32px; }
 @media (max-width: 900px) { .support-grid { grid-template-columns: 1fr; } }
+
+/* Support button in the top bar */
+.top nav a.nav-support { color: #d6336c; border: 1.5px solid #f3b7cb; padding: 6px 14px; border-radius: 999px; font-weight: 650; }
+.top nav a.nav-support:hover { background: #fde8ef; color: #c2255c; }
+@media (max-width: 620px) {
+  .top nav a.nav-support { display: inline-block; padding: 6px 11px; }
+}
