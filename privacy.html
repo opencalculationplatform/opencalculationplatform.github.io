@@ -29,7 +29,7 @@
     <section>
       <div class="wrap doc">
         <h2 style="margin-top:0">Privacy policy</h2>
-        <p class="sub">Open Calculation Platform (OCP), for Windows and Android. Last updated: 22 November 2026.</p>
+        <p class="sub">Open Calculation Platform (OCP), for Windows and Android. Last updated: 24 November 2026.</p>
 
         <h3>In short</h3>
         <p>OCP has no account, no advertising, no analytics and no tracking. Your worksheets stay on your device. OCP goes online only when you open its directory or publish to it.</p>
@@ -44,6 +44,7 @@
         <h3>When OCP uses the internet</h3>
         <ul>
           <li><strong>Directory:</strong> when you open the directory, OCP downloads its list, and when you install an item, that item's file. These come from GitHub (raw.githubusercontent.com). GitHub receives the request like any web request, including your IP address; see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</li>
+          <li><strong>Updates:</strong> when OCP starts, at most once a day, it asks GitHub (api.github.com) for the latest version of OCP. Only that request is sent: no data about you, your computer or your worksheets. You can turn this off in About › Updates (Windows) or Settings › About (Android). A new version is downloaded only when you choose to update, from OCP's releases on GitHub, and it is checked against the release's SHA-256 sums before it is installed.</li>
           <li><strong>Publishing (optional):</strong> when you choose Publish, you sign in to GitHub on GitHub's own page with a code. OCP then sends the component or table you chose, its title, category and description, and your GitHub user name to the public directory as a pull request. It becomes public. The sign-in is kept in memory only and forgotten when OCP closes. OCP never sees your GitHub password.</li>
           <li>Nothing else is sent. OCP does not send your worksheets, your files or any usage information anywhere.</li>
           <li>OCP shows worksheets with the system's web view (Microsoft Edge WebView2 on Windows, Android System WebView on Android). These components are Microsoft's and Google's and follow your system's own diagnostic-data settings; OCP loads nothing from the web through them.</li>
@@ -54,7 +55,7 @@
 
         <h3>Permissions (Android)</h3>
         <ul>
-          <li><strong>Internet:</strong> only for the directory and publishing, as above.</li>
+          <li><strong>Internet:</strong> only for updates, the directory and publishing, as above.</li>
           <li>OCP asks for no other permission. Files are opened and saved through the system's file picker, which gives OCP access only to the file you pick.</li>
         </ul>
 
