@@ -59,7 +59,7 @@
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <script>
     document.querySelectorAll(".tex").forEach(function (el) {
-      try { katex.render(el.dataset.tex, el, { throwOnError: false, strict: false }); } catch (e) { el.textContent = el.dataset.tex; }
+      try { katex.render(el.dataset.tex, el, { throwOnError: false, strict: false, macros: { [String.fromCharCode(92) + 'coloneq']: String.fromCharCode(92) + 'coloneqq' } }); } catch (e) { el.textContent = el.dataset.tex; }
     });
   </script>
 </body>
